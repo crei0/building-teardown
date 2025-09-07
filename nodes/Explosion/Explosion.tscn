@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmqoxwgcwjlko"]
+
+[ext_resource type="Script" uid="uid://bdigci1mcutsb" path="res://nodes/Explosion/Explosion.gd" id="1_d2fwc"]
+[ext_resource type="Texture2D" uid="uid://bi16ga43gs552" path="res://assets/kenney/red.png" id="2_mslok"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d2fwc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcfq0"]
+albedo_texture = ExtResource("2_mslok")
+
+[sub_resource type="SphereMesh" id="SphereMesh_mslok"]
+
+[node name="Explosion_StaticBody3d" type="StaticBody3D"]
+script = ExtResource("1_d2fwc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_d2fwc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_bcfq0")
+mesh = SubResource("SphereMesh_mslok")

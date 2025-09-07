@@ -1,0 +1,108 @@
+[gd_scene load_steps=11 format=3 uid="uid://8xxbslqa78tw"]
+
+[ext_resource type="Texture2D" uid="uid://bqncsikejwi6x" path="res://assets/kenney/grey.png" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cb0a3oxjxjgol" path="res://nodes/BuildingBlock/BuildingBlock.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bmqoxwgcwjlko" path="res://nodes/Explosion/Explosion.tscn" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://eq22er4oefw3" path="res://Camera.gd" id="3_h2yge"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_h2yge"]
+sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+background_mode = 2
+sky = SubResource("Sky_h2yge")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_texture = ExtResource("1_ig7tw")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7dm0k"]
+material = SubResource("StandardMaterial3D_0xm2m")
+size = Vector2(40, 40)
+
+[node name="Main" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.563619, -0.757073, -0.330416, 0.488828, -0.628133, 0.605389, -0.665869, 0.179693, 0.724106, 0, 8.43002, 6.01791)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1bvp3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.76286, 0.646563, 0, -0.646563, 0.76286, 0, 7.847, 7.8703)
+script = ExtResource("3_h2yge")
+explosion_scene = ExtResource("2_1bvp3")
+
+[node name="FloorStaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorStaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FloorStaticBody3D"]
+mesh = SubResource("PlaneMesh_7dm0k")
+skeleton = NodePath("../..")
+
+[node name="Building" type="Node3D" parent="."]
+
+[node name="BuildingBlock-1" parent="Building" instance=ExtResource("2_0xm2m")]
+
+[node name="BuildingBlock-2" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="BuildingBlock-5" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="BuildingBlock-6" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="BuildingBlock-3" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="BuildingBlock-4" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+
+[node name="BuildingBlock-7" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="BuildingBlock-8" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -1)
+
+[node name="BuildingBlock-9" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="BuildingBlock-10" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)
+
+[node name="BuildingBlock-11" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1)
+
+[node name="BuildingBlock-12" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1)
+
+[node name="BuildingBlock-13" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="BuildingBlock-14" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0)
+
+[node name="BuildingBlock-15" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1)
+
+[node name="BuildingBlock-16" parent="Building" instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -1)
+
+[node name="ExplosionsContainerNode3D" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.76286, 0.646563, 0, -0.646563, 0.76286, 0, 7.847, 7.8703)
