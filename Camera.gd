@@ -2,10 +2,22 @@ extends Camera3D
 class_name Camera
 
 const RAY_LENGTH = 1000.0
+const MOUSE_SENSITIVITY = 0.005
 
 @onready var explosions_container_node_3d: Node3D = %ExplosionsContainerNode3D
+@onready var camera_container: Node3D = %CameraContainer
 
 @export var explosion_scene: PackedScene
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	# Camera Orbit
+	if (
+		camera_container and
+		event is InputEventMouseMotion
+	):
+		camera_container.rotation.y -= event.relative.x * MOUSE_SENSITIVITY
+		camera_container.rotation.x -= event.relative.y * MOUSE_SENSITIVITY
 
 
 func _input(event):

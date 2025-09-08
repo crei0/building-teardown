@@ -38,9 +38,13 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1bvp3")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="CameraContainer" type="Node3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.76286, 0.646563, 0, -0.646563, 0.76286, 0, 7.847, 7.8703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.804863, 2.06715, 0.604568)
+
+[node name="Camera3D" type="Camera3D" parent="CameraContainer"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.247)
 script = ExtResource("3_h2yge")
 explosion_scene = ExtResource("2_1bvp3")
 
