@@ -14,6 +14,7 @@ lightmap_size_hint = Vector2i(14, 21)
 material = SubResource("StandardMaterial3D_ntmtf")
 
 [node name="BuildingBlock" type="RigidBody3D"]
+mass = 0.5
 script = ExtResource("1_8nvew")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -1,8 +1,11 @@
 # Building teardown experiment
 
-Based on [Creating fully destructible cities while maintaining 60FPS](https://www.gamedeveloper.com/design/creating-fully-destructible-cities-while-maintaining-60fps)
+Inspired by [Creating fully destructible cities while maintaining 60FPS](https://www.gamedeveloper.com/design/creating-fully-destructible-cities-while-maintaining-60fps)
 
 # TODO:
 
-* Make the explosion work
-* Publish repository
+[x] Make the explosion work
+[] Improve visuals of building
+[] Improve visuals of explosion
+[] Publish repository to GitHub
+[] Export for the web to GitHub Pages
