@@ -1,0 +1,1109 @@
+[gd_scene load_steps=35 format=3 uid="uid://dolyuxvcas8u1"]
+
+[ext_resource type="Script" uid="uid://dws6xvwkge376" path="res://experiments/node_3d_test_1.gd" id="1_mgk2w"]
+[ext_resource type="Texture2D" uid="uid://b4vfog48lf6vr" path="res://assets/kenney/green.png" id="2_efe5o"]
+[ext_resource type="Texture2D" uid="uid://bpgoo6f2rkeb8" path="res://assets/kenney/purple.png" id="3_15rod"]
+[ext_resource type="Texture2D" uid="uid://b51eoubhopioe" path="res://assets/kenney/dark.png" id="4_ois3n"]
+[ext_resource type="Texture2D" uid="uid://bqncsikejwi6x" path="res://assets/kenney/grey.png" id="5_xvqrq"]
+[ext_resource type="Texture2D" uid="uid://nmgb8onyo1lq" path="res://assets/kenney/orange.png" id="6_xvqrq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bqgvi"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_mgk2w"]
+sky_material = SubResource("ProceduralSkyMaterial_bqgvi")
+
+[sub_resource type="Environment" id="Environment_efe5o"]
+background_mode = 2
+sky = SubResource("Sky_mgk2w")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xvqrq"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="QuadMesh" id="QuadMesh_15rod"]
+size = Vector2(100, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqghk"]
+albedo_texture = ExtResource("4_ois3n")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqgvi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mgk2w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bqgvi"]
+radius = 0.1
+height = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mgk2w"]
+radius = 0.1
+height = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bqgvi"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_mgk2w"]
+
+[sub_resource type="Animation" id="Animation_efe5o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%StaticBody3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 5.53989, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mgk2w"]
+resource_name = "left_and_right"
+length = 3.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%StaticBody3D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 5.53989, 0), Vector3(3.62734, 5.53989, 0), Vector3(-5.244, 5.53989, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efe5o"]
+_data = {
+&"RESET": SubResource("Animation_efe5o"),
+&"left_and_right": SubResource("Animation_mgk2w")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mgk2w"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_efe5o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15rod"]
+albedo_texture = ExtResource("2_efe5o")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_efe5o"]
+radius = 0.25
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_15rod"]
+radius = 0.25
+radial_segments = 8
+rings = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bi16f"]
+albedo_texture = ExtResource("3_15rod")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bi16f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ois3n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ois3n"]
+albedo_texture = ExtResource("5_xvqrq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ois3n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xvqrq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m166"]
+albedo_texture = ExtResource("6_xvqrq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xvqrq"]
+albedo_texture = ExtResource("2_efe5o")
+
+[node name="Rope-01" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_efe5o")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 4.95275, 9.16883)
+
+[node name="FlloorStaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FlloorStaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_xvqrq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FlloorStaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_15rod")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_kqghk")
+metadata/_edit_lock_ = true
+
+[node name="Node3D-Test1" type="Node3D" parent="."]
+script = ExtResource("1_mgk2w")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D-Test1"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.53989, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+shape = SubResource("BoxShape3D_bqgvi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+mesh = SubResource("BoxMesh_mgk2w")
+skeleton = NodePath("../../..")
+
+[node name="PinJoint3D" type="PinJoint3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.99386, 0)
+node_a = NodePath("../StaticBody3D")
+node_b = NodePath("../RigidBody3D-Rope1")
+
+[node name="RigidBody3D-Rope1" type="RigidBody3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.46696, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test1/RigidBody3D-Rope1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+shape = SubResource("CapsuleShape3D_bqgvi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test1/RigidBody3D-Rope1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+mesh = SubResource("CapsuleMesh_mgk2w")
+
+[node name="PinJoint3D2" type="PinJoint3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.93967, 0)
+node_a = NodePath("../RigidBody3D-Rope1")
+node_b = NodePath("../RigidBody3D-Rope2")
+
+[node name="RigidBody3D-Rope2" type="RigidBody3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.45044, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test1/RigidBody3D-Rope2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+shape = SubResource("CapsuleShape3D_bqgvi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test1/RigidBody3D-Rope2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+mesh = SubResource("CapsuleMesh_mgk2w")
+
+[node name="PinJoint3D3" type="PinJoint3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.95764, 0)
+node_a = NodePath("../RigidBody3D-Rope2")
+node_b = NodePath("../RigidBody3D-Rope3")
+
+[node name="RigidBody3D-Rope3" type="RigidBody3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31639, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test1/RigidBody3D-Rope3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+shape = SubResource("CapsuleShape3D_bqgvi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test1/RigidBody3D-Rope3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+mesh = SubResource("CapsuleMesh_mgk2w")
+
+[node name="PinJoint3D4" type="PinJoint3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76545, 0)
+node_a = NodePath("../RigidBody3D-Rope3")
+node_b = NodePath("../RigidBody3D-Rope4")
+
+[node name="RigidBody3D-Rope4" type="RigidBody3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18718, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test1/RigidBody3D-Rope4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+shape = SubResource("CapsuleShape3D_bqgvi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test1/RigidBody3D-Rope4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+mesh = SubResource("CapsuleMesh_mgk2w")
+
+[node name="PinJoint3D5" type="PinJoint3D" parent="Node3D-Test1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67069, 0)
+node_a = NodePath("../RigidBody3D-Rope4")
+node_b = NodePath("../RigidBody3D-Ball")
+
+[node name="RigidBody3D-Ball" type="RigidBody3D" parent="Node3D-Test1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test1/RigidBody3D-Ball"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+shape = SubResource("SphereShape3D_bqgvi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test1/RigidBody3D-Ball"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01566, 0)
+mesh = SubResource("SphereMesh_mgk2w")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D-Test1"]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_efe5o")
+}
+
+[node name="Node3D-Test2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 8, 0)
+
+[node name="RigidBody3D-Ball1" type="RigidBody3D" parent="Node3D-Test2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test2/RigidBody3D-Ball1"]
+shape = SubResource("SphereShape3D_mgk2w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test2/RigidBody3D-Ball1"]
+mesh = SubResource("SphereMesh_efe5o")
+surface_material_override/0 = SubResource("StandardMaterial3D_15rod")
+
+[node name="PinJoint3D" type="PinJoint3D" parent="Node3D-Test2"]
+node_a = NodePath("../RigidBody3D-Ball1")
+node_b = NodePath("../RigidBody3D-Connector")
+
+[node name="RigidBody3D-Connector" type="RigidBody3D" parent="Node3D-Test2"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.76325, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test2/RigidBody3D-Connector"]
+shape = SubResource("CapsuleShape3D_efe5o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test2/RigidBody3D-Connector"]
+mesh = SubResource("CapsuleMesh_15rod")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_bi16f")
+
+[node name="PinJoint3D2" type="PinJoint3D" parent="Node3D-Test2"]
+node_a = NodePath("../RigidBody3D-Connector")
+node_b = NodePath("../RigidBody3D-Ball2")
+
+[node name="RigidBody3D-Ball2" type="RigidBody3D" parent="Node3D-Test2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test2/RigidBody3D-Ball2"]
+shape = SubResource("SphereShape3D_mgk2w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test2/RigidBody3D-Ball2"]
+mesh = SubResource("SphereMesh_efe5o")
+surface_material_override/0 = SubResource("StandardMaterial3D_15rod")
+
+[node name="Node3D-Test3" type="Node3D" parent="."]
+
+[node name="RigidBody3D-Box1" type="RigidBody3D" parent="Node3D-Test3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 6, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test3/RigidBody3D-Box1"]
+shape = SubResource("BoxShape3D_bi16f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test3/RigidBody3D-Box1"]
+mesh = SubResource("BoxMesh_ois3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ois3n")
+
+[node name="PinJoint3D" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box1")
+node_b = NodePath("../RigidBody3D-Box2")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D2" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box1")
+node_b = NodePath("../RigidBody3D-Box3")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D3" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box1")
+node_b = NodePath("../RigidBody3D-Box5")
+exclude_nodes_from_collision = false
+
+[node name="RigidBody3D-Box2" type="RigidBody3D" parent="Node3D-Test3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 6, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test3/RigidBody3D-Box2"]
+shape = SubResource("BoxShape3D_bi16f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test3/RigidBody3D-Box2"]
+mesh = SubResource("BoxMesh_ois3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ois3n")
+
+[node name="PinJoint3D5" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box2")
+node_b = NodePath("../RigidBody3D-Box4")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D6" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box2")
+node_b = NodePath("../RigidBody3D-Box6")
+exclude_nodes_from_collision = false
+
+[node name="RigidBody3D-Box3" type="RigidBody3D" parent="Node3D-Test3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 6, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test3/RigidBody3D-Box3"]
+shape = SubResource("BoxShape3D_bi16f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test3/RigidBody3D-Box3"]
+mesh = SubResource("BoxMesh_ois3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ois3n")
+
+[node name="PinJoint3D4" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box3")
+node_b = NodePath("../RigidBody3D-Box7")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D7" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box3")
+node_b = NodePath("../RigidBody3D-Box4")
+exclude_nodes_from_collision = false
+
+[node name="RigidBody3D-Box4" type="RigidBody3D" parent="Node3D-Test3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 6, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test3/RigidBody3D-Box4"]
+shape = SubResource("BoxShape3D_bi16f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test3/RigidBody3D-Box4"]
+mesh = SubResource("BoxMesh_ois3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ois3n")
+
+[node name="RigidBody3D-Box5" type="RigidBody3D" parent="Node3D-Test3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 7, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test3/RigidBody3D-Box5"]
+shape = SubResource("BoxShape3D_bi16f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test3/RigidBody3D-Box5"]
+mesh = SubResource("BoxMesh_ois3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ois3n")
+
+[node name="PinJoint3D8" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box5")
+node_b = NodePath("../RigidBody3D-Box6")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D9" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box5")
+node_b = NodePath("../RigidBody3D-Box7")
+exclude_nodes_from_collision = false
+
+[node name="RigidBody3D-Box6" type="RigidBody3D" parent="Node3D-Test3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 7, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test3/RigidBody3D-Box6"]
+shape = SubResource("BoxShape3D_bi16f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test3/RigidBody3D-Box6"]
+mesh = SubResource("BoxMesh_ois3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ois3n")
+
+[node name="PinJoint3D10" type="PinJoint3D" parent="Node3D-Test3"]
+node_a = NodePath("../RigidBody3D-Box6")
+node_b = NodePath("../RigidBody3D-Box8")
+exclude_nodes_from_collision = false
+
+[node name="RigidBody3D-Box7" type="RigidBody3D" parent="Node3D-Test3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 7, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test3/RigidBody3D-Box7"]
+shape = SubResource("BoxShape3D_bi16f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test3/RigidBody3D-Box7"]
+mesh = SubResource("BoxMesh_ois3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ois3n")
+
+[node name="RigidBody3D-Box8" type="RigidBody3D" parent="Node3D-Test3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 7, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test3/RigidBody3D-Box8"]
+shape = SubResource("BoxShape3D_bi16f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test3/RigidBody3D-Box8"]
+mesh = SubResource("BoxMesh_ois3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_ois3n")
+
+[node name="Node3D-Test4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2.5, 0)
+
+[node name="RigidBody3D-Vertex-0FL" type="RigidBody3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test4/RigidBody3D-Vertex-0FL"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test4/RigidBody3D-Vertex-0FL"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m166")
+
+[node name="RigidBody3D-Vertex-0FR" type="RigidBody3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test4/RigidBody3D-Vertex-0FR"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test4/RigidBody3D-Vertex-0FR"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m166")
+
+[node name="RigidBody3D-Vertex-0BL" type="RigidBody3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -4.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test4/RigidBody3D-Vertex-0BL"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test4/RigidBody3D-Vertex-0BL"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m166")
+
+[node name="RigidBody3D-Vertex-0BR" type="RigidBody3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.5, -4.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test4/RigidBody3D-Vertex-0BR"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test4/RigidBody3D-Vertex-0BR"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m166")
+
+[node name="PinJoint3D-0FL-0BL" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -2.5)
+node_a = NodePath("../RigidBody3D-Vertex-0FL")
+node_b = NodePath("../RigidBody3D-Vertex-0BL")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-0FR-0BR" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.5, -2.5)
+node_a = NodePath("../RigidBody3D-Vertex-0FR")
+node_b = NodePath("../RigidBody3D-Vertex-0BR")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-0FL-0FR" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, -0.5)
+node_a = NodePath("../RigidBody3D-Vertex-0FL")
+node_b = NodePath("../RigidBody3D-Vertex-0FR")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-0BL-0BR" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, -4)
+node_a = NodePath("../RigidBody3D-Vertex-0BL")
+node_b = NodePath("../RigidBody3D-Vertex-0BR")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-0FL-1FL" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, -0.5)
+node_a = NodePath("../RigidBody3D-Vertex-0FL")
+node_b = NodePath("../RigidBody3D-Vertex-1FL")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-0FR-1FR" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 2, -0.5)
+node_a = NodePath("../RigidBody3D-Vertex-0FR")
+node_b = NodePath("../RigidBody3D-Vertex-1FR")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-0BL-1BL" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, -4.5)
+node_a = NodePath("../RigidBody3D-Vertex-0BL")
+node_b = NodePath("../RigidBody3D-Vertex-1BL")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-0BR-1BR" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 2, -4.5)
+node_a = NodePath("../RigidBody3D-Vertex-0BR")
+node_b = NodePath("../RigidBody3D-Vertex-1BR")
+exclude_nodes_from_collision = false
+
+[node name="RigidBody3D-Vertex-1FL" type="RigidBody3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 4, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test4/RigidBody3D-Vertex-1FL"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test4/RigidBody3D-Vertex-1FL"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m166")
+
+[node name="RigidBody3D-Vertex-1FR" type="RigidBody3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 4, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test4/RigidBody3D-Vertex-1FR"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test4/RigidBody3D-Vertex-1FR"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m166")
+
+[node name="RigidBody3D-Vertex-1BL" type="RigidBody3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 4, -4.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test4/RigidBody3D-Vertex-1BL"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test4/RigidBody3D-Vertex-1BL"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m166")
+
+[node name="RigidBody3D-Vertex-1BR" type="RigidBody3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 4, -4.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test4/RigidBody3D-Vertex-1BR"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test4/RigidBody3D-Vertex-1BR"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_0m166")
+
+[node name="PinJoint3D-1FL-1BL" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 4, -2.5)
+node_a = NodePath("../RigidBody3D-Vertex-1FL")
+node_b = NodePath("../RigidBody3D-Vertex-1BL")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-1FR-1BR" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 4, -2.5)
+node_a = NodePath("../RigidBody3D-Vertex-1FR")
+node_b = NodePath("../RigidBody3D-Vertex-1BR")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-1FL-1FR" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 4, -0.5)
+node_a = NodePath("../RigidBody3D-Vertex-1FL")
+node_b = NodePath("../RigidBody3D-Vertex-1FR")
+exclude_nodes_from_collision = false
+
+[node name="PinJoint3D-1BL-1BR" type="PinJoint3D" parent="Node3D-Test4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 4, -4)
+node_a = NodePath("../RigidBody3D-Vertex-1BL")
+node_b = NodePath("../RigidBody3D-Vertex-1BR")
+exclude_nodes_from_collision = false
+
+[node name="Node3D-Test5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5, 2.5, -9)
+
+[node name="RigidBody3D-1" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-1"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-1"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-2" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-2"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-2"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-3" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-3"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-3"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-4" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-4"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-4"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-5" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-5"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-5"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-6" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-6"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-6"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="PinJoint3D-1" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -1)
+node_a = NodePath("../RigidBody3D-1")
+node_b = NodePath("../RigidBody3D-4")
+
+[node name="PinJoint3D-2" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -1)
+node_a = NodePath("../RigidBody3D-2")
+node_b = NodePath("../RigidBody3D-5")
+
+[node name="PinJoint3D-3" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, -1)
+node_a = NodePath("../RigidBody3D-3")
+node_b = NodePath("../RigidBody3D-6")
+
+[node name="PinJoint3D-4" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, -0.5)
+node_a = NodePath("../RigidBody3D-1")
+node_b = NodePath("../RigidBody3D-2")
+
+[node name="PinJoint3D-5" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -0.5)
+node_a = NodePath("../RigidBody3D-2")
+node_b = NodePath("../RigidBody3D-3")
+
+[node name="PinJoint3D-6" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, -1.5)
+node_a = NodePath("../RigidBody3D-4")
+node_b = NodePath("../RigidBody3D-5")
+
+[node name="PinJoint3D-7" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -1.5)
+node_a = NodePath("../RigidBody3D-5")
+node_b = NodePath("../RigidBody3D-6")
+
+[node name="Node3D-floor1" type="Node3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -1.5)
+
+[node name="RigidBody3D-7" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-7"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-7"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-8" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-8"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-8"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-9" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-9"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-9"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-10" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-10"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-10"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-11" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-11"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-11"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-12" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-12"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-12"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="PinJoint3D-8" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -1)
+node_a = NodePath("../RigidBody3D-7")
+node_b = NodePath("../RigidBody3D-8")
+
+[node name="PinJoint3D-9" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -1)
+node_a = NodePath("../RigidBody3D-8")
+node_b = NodePath("../RigidBody3D-9")
+
+[node name="PinJoint3D-10" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, -1)
+node_a = NodePath("../RigidBody3D-10")
+node_b = NodePath("../RigidBody3D-11")
+
+[node name="PinJoint3D-11" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, -0.5)
+node_a = NodePath("../RigidBody3D-11")
+node_b = NodePath("../RigidBody3D-12")
+
+[node name="PinJoint3D-12" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -0.5)
+node_a = NodePath("../RigidBody3D-7")
+node_b = NodePath("../RigidBody3D-10")
+
+[node name="PinJoint3D-13" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, -1.5)
+node_a = NodePath("../RigidBody3D-8")
+node_b = NodePath("../RigidBody3D-11")
+
+[node name="PinJoint3D-14" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -1.5)
+node_a = NodePath("../RigidBody3D-9")
+node_b = NodePath("../RigidBody3D-12")
+
+[node name="Node3D-floor2" type="Node3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -1.5)
+
+[node name="RigidBody3D-13" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-13"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-13"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-14" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-14"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-14"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-15" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-15"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-15"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-16" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-16"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-16"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-17" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-17"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-17"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-18" type="RigidBody3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test5/RigidBody3D-18"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test5/RigidBody3D-18"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="PinJoint3D-15" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, -1)
+node_a = NodePath("../RigidBody3D-13")
+node_b = NodePath("../RigidBody3D-14")
+
+[node name="PinJoint3D-16" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2.5, -1)
+node_a = NodePath("../RigidBody3D-14")
+node_b = NodePath("../RigidBody3D-15")
+
+[node name="PinJoint3D-17" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, -1)
+node_a = NodePath("../RigidBody3D-16")
+node_b = NodePath("../RigidBody3D-17")
+
+[node name="PinJoint3D-18" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.5, -0.5)
+node_a = NodePath("../RigidBody3D-17")
+node_b = NodePath("../RigidBody3D-18")
+
+[node name="PinJoint3D-19" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.5, -0.5)
+node_a = NodePath("../RigidBody3D-13")
+node_b = NodePath("../RigidBody3D-16")
+
+[node name="PinJoint3D-20" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.5, -1.5)
+node_a = NodePath("../RigidBody3D-14")
+node_b = NodePath("../RigidBody3D-17")
+
+[node name="PinJoint3D-21" type="PinJoint3D" parent="Node3D-Test5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.5, -1.5)
+node_a = NodePath("../RigidBody3D-15")
+node_b = NodePath("../RigidBody3D-18")
+
+[node name="Node3D-Test6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5, 2.5, 0)
+
+[node name="RigidBody3D-4" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-4"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-4"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-5" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-5"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-5"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-6" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-6"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-6"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="PinJoint3D-6" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, -1.5)
+node_a = NodePath("../RigidBody3D-4")
+node_b = NodePath("../RigidBody3D-5")
+
+[node name="PinJoint3D-7" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -1.5)
+node_a = NodePath("../RigidBody3D-5")
+node_b = NodePath("../RigidBody3D-6")
+
+[node name="Node3D-floor1" type="Node3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -1.5)
+
+[node name="RigidBody3D-7" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-7"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-7"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-8" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-8"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-8"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-9" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-9"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-9"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-10" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-10"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-10"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-11" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-11"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-11"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-12" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-12"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-12"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="PinJoint3D-8" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -1)
+node_a = NodePath("../RigidBody3D-7")
+node_b = NodePath("../RigidBody3D-8")
+
+[node name="PinJoint3D-9" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -1)
+node_a = NodePath("../RigidBody3D-8")
+node_b = NodePath("../RigidBody3D-9")
+
+[node name="PinJoint3D-10" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, -1)
+node_a = NodePath("../RigidBody3D-10")
+node_b = NodePath("../RigidBody3D-11")
+
+[node name="PinJoint3D-11" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, -0.5)
+node_a = NodePath("../RigidBody3D-11")
+node_b = NodePath("../RigidBody3D-12")
+
+[node name="PinJoint3D-12" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -0.5)
+node_a = NodePath("../RigidBody3D-7")
+node_b = NodePath("../RigidBody3D-10")
+
+[node name="PinJoint3D-13" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, -1.5)
+node_a = NodePath("../RigidBody3D-8")
+node_b = NodePath("../RigidBody3D-11")
+
+[node name="PinJoint3D-14" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -1.5)
+node_a = NodePath("../RigidBody3D-9")
+node_b = NodePath("../RigidBody3D-12")
+
+[node name="Node3D-floor2" type="Node3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -1.5)
+
+[node name="RigidBody3D-13" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-13"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-13"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-14" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-14"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-14"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-15" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-15"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-15"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-16" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-16"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-16"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-17" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-17"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-17"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="RigidBody3D-18" type="RigidBody3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D-Test6/RigidBody3D-18"]
+shape = SubResource("BoxShape3D_ois3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D-Test6/RigidBody3D-18"]
+mesh = SubResource("BoxMesh_xvqrq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvqrq")
+
+[node name="PinJoint3D-15" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, -1)
+node_a = NodePath("../RigidBody3D-13")
+node_b = NodePath("../RigidBody3D-14")
+
+[node name="PinJoint3D-16" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2.5, -1)
+node_a = NodePath("../RigidBody3D-14")
+node_b = NodePath("../RigidBody3D-15")
+
+[node name="PinJoint3D-17" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.5, -1)
+node_a = NodePath("../RigidBody3D-16")
+node_b = NodePath("../RigidBody3D-17")
+
+[node name="PinJoint3D-18" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.5, -0.5)
+node_a = NodePath("../RigidBody3D-17")
+node_b = NodePath("../RigidBody3D-18")
+
+[node name="PinJoint3D-19" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.5, -0.5)
+node_a = NodePath("../RigidBody3D-13")
+node_b = NodePath("../RigidBody3D-16")
+
+[node name="PinJoint3D-20" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.5, -1.5)
+node_a = NodePath("../RigidBody3D-14")
+node_b = NodePath("../RigidBody3D-17")
+
+[node name="PinJoint3D-21" type="PinJoint3D" parent="Node3D-Test6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.5, -1.5)
+node_a = NodePath("../RigidBody3D-15")
+node_b = NodePath("../RigidBody3D-18")

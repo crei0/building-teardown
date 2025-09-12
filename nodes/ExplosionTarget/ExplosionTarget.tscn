@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuy1b3yluqbon"]
+
+[ext_resource type="Texture2D" uid="uid://bpgoo6f2rkeb8" path="res://assets/kenney/purple.png" id="1_0l0a2"]
+[ext_resource type="Script" uid="uid://cvho5olv0bdcm" path="res://nodes/ExplosionTarget/ExplosionTarget.gd" id="1_qokgv"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qokgv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_apyni"]
+albedo_texture = ExtResource("1_0l0a2")
+
+[node name="ExplosionTarget" type="Node3D"]
+script = ExtResource("1_qokgv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_qokgv")
+surface_material_override/0 = SubResource("StandardMaterial3D_apyni")
