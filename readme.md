@@ -8,7 +8,7 @@ Inspired by [Creating fully destructible cities while maintaining 60FPS](https:/
 [] Press left click and hold to generate area of explosion
 [] Release left click to explode area
 [x] Change explosion to use an Area2D?
-[] Improve visuals of building
+[x] Improve visuals of building
 [] Improve visuals of explosion
 	- https://www.youtube.com/watch?v=RtJJVjjM_-Q 
 [] Publish repository to GitHub

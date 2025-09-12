@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://chv8bkmlkinhu"]
+
+[ext_resource type="Script" uid="uid://b6jo32h71v7wq" path="res://assets/building_blocks/ModularBuildingBlock.RigidBody3D.gd" id="1_rx7fd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rx7fd"]
+
+[node name="ModularBuildingBlock" type="RigidBody3D"]
+script = ExtResource("1_rx7fd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_rx7fd")
