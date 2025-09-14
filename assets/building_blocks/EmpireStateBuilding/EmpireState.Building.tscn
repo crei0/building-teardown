@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://drdqkvu4bmpnj"]
+[gd_scene load_steps=4 format=3 uid="uid://drdqkvu4bmpnj"]
 
-[ext_resource type="PackedScene" uid="uid://chv8bkmlkinhu" path="res://assets/building_blocks/ModularBuildingBlock.tscn" id="1_kqpgr"]
+[ext_resource type="Script" uid="uid://meuwobpft3b2" path="res://nodes/BuildingBlocksCollection/BuildingBlocksCollection.gd" id="1_kfh68"]
+[ext_resource type="PackedScene" uid="uid://chv8bkmlkinhu" path="res://assets/building_blocks/ModularBuildingBlock/ModularBuildingBlock.tscn" id="1_kqpgr"]
 [ext_resource type="PackedScene" uid="uid://b4smgng38vedy" path="res://assets/building_blocks/EmpireStateBuilding/EmpireStateBuilding.Block1.Mesh.glb" id="2_kfh68"]
 
 [node name="EmpireState_building" type="Node3D"]
+script = ExtResource("1_kfh68")
 
 [node name="ModularBuildingBlock-1" parent="." instance=ExtResource("1_kqpgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)

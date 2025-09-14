@@ -7,4 +7,14 @@ class_name BuildingBlocksCollection
 
 
 func _ready() -> void:
-	pass
+	_post_ready.call_deferred()
+
+
+func _post_ready() -> void:
+	_generate_joints()
+
+
+func _generate_joints() -> void:
+	for child in get_children():
+		if child is ModularBuildingBlock:
+			print("BuildingBlocksCollection > _generate_joints > child = ", child.name)

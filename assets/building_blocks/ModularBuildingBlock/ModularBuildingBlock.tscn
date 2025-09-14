@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://chv8bkmlkinhu"]
+
+[ext_resource type="Script" uid="uid://b6jo32h71v7wq" path="res://assets/building_blocks/ModularBuildingBlock/ModularBuildingBlock.RigidBody3D.gd" id="1_rx7fd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rx7fd"]
+
+[node name="ModularBuildingBlock" type="RigidBody3D"]
+collision_layer = 512
+collision_mask = 512
+script = ExtResource("1_rx7fd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_rx7fd")
+
+[node name="RayCast3D-Y-Green-Height" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+target_position = Vector3(0, 0.75, 0)
+collision_mask = 512
+debug_shape_custom_color = Color(0, 0.798075, 0.308012, 1)
+debug_shape_thickness = 4
+
+[node name="RayCast3D-Z-Blue-Width" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+target_position = Vector3(0, 0, 0.75)
+collision_mask = 512
+debug_shape_custom_color = Color(0.301359, 0.692788, 0.999999, 1)
+debug_shape_thickness = 4
+
+[node name="RayCast3D-X-Red-Depth" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+target_position = Vector3(0.75, 0, 0)
+collision_mask = 512
+debug_shape_custom_color = Color(1, 0.455438, 0.608279, 1)
+debug_shape_thickness = 4
