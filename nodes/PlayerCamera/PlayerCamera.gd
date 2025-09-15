@@ -1,3 +1,4 @@
+@tool
 extends Node3D
 class_name Player
 
@@ -5,6 +6,7 @@ const RAY_LENGTH = 200.0
 const MOUSE_SENSITIVITY = 0.005
 
 @export var explosion_scene: PackedScene
+@export_range(5, 250, 1) var distance: float = 20.0 : set = _set_distance
 
 @onready var camera_3d: Camera3D = %Camera3D
 @onready var explosions_container_node_3d: Node3D = %ExplosionsContainerNode3D
@@ -15,6 +17,12 @@ var _is_mouse_left_being_pressed: bool = false
 var _is_mouse_right_being_pressed: bool = false
 var _explosion_global_position: Vector3 = Vector3.ZERO : set = _set_explosion_global_position
 
+
+func _set_distance(new_distance: float) -> void:
+	distance = clampf(new_distance,5, 250)
+	
+	if camera_3d:
+		camera_3d.z = distance
 
 func _set_explosion_global_position(new_explosion_global_position: Vector3) -> void:
 	_explosion_global_position = new_explosion_global_position
@@ -65,4 +73,3 @@ func _input(event: InputEvent):
 	
 	if event.is_action_released("mouse_wheel_down"):
 		zoom += 1
-		

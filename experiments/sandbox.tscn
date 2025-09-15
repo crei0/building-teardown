@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dfuttsticrodp"]
 
 [ext_resource type="PackedScene" uid="uid://drdqkvu4bmpnj" path="res://assets/building_blocks/EmpireStateBuilding/EmpireState.Building.tscn" id="1_jdnlh"]
-[ext_resource type="PackedScene" uid="uid://bjy8munmo030m" path="res://nodes/Player/Player.tscn" id="2_inyr1"]
+[ext_resource type="PackedScene" uid="uid://bjy8munmo030m" path="res://nodes/PlayerCamera/PlayerCamera.tscn" id="2_inyr1"]
 [ext_resource type="Material" uid="uid://cdl011t1ig062" path="res://assets/kenney/kenny-dark.StandardMaterial3d..tres" id="3_bxmun"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_inyr1"]
@@ -34,14 +34,16 @@ shadow_enabled = true
 [node name="EmpireState_building" parent="." instance=ExtResource("1_jdnlh")]
 
 [node name="CameraContainer" parent="." instance=ExtResource("2_inyr1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 12.5, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10.0351, -4.1301)
+distance = 40.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="FloorStaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 513
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorStaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_inyr1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FloorStaticBody3D"]
 mesh = SubResource("PlaneMesh_inyr1")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("3_bxmun")

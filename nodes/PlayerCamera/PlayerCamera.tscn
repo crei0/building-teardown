@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://bjy8munmo030m"]
 
-[ext_resource type="Script" uid="uid://eq22er4oefw3" path="res://nodes/Player/Player.gd" id="1_k3tdu"]
+[ext_resource type="Script" uid="uid://eq22er4oefw3" path="res://nodes/PlayerCamera/PlayerCamera.gd" id="1_k3tdu"]
 [ext_resource type="PackedScene" uid="uid://clb8s1j0qhby4" path="res://nodes/Explosion/ExplosionUsingArea2D.tscn" id="3_yv63t"]
 [ext_resource type="PackedScene" uid="uid://cuy1b3yluqbon" path="res://nodes/ExplosionTarget/ExplosionTarget.tscn" id="4_wj20d"]
 
-[node name="CameraContainer" type="Node3D"]
+[node name="PlayerCamera" type="Node3D"]
 script = ExtResource("1_k3tdu")
 explosion_scene = ExtResource("3_yv63t")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 
 [node name="ExplosionTarget" parent="." instance=ExtResource("4_wj20d")]
 unique_name_in_owner = true
