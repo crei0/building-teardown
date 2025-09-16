@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjy8munmo030m"]
+[gd_scene load_steps=5 format=3 uid="uid://bjy8munmo030m"]
 
 [ext_resource type="Script" uid="uid://eq22er4oefw3" path="res://nodes/PlayerCamera/PlayerCamera.gd" id="1_k3tdu"]
 [ext_resource type="PackedScene" uid="uid://clb8s1j0qhby4" path="res://nodes/Explosion/ExplosionUsingArea2D.tscn" id="3_yv63t"]
+[ext_resource type="Texture2D" uid="uid://bs3vsgefoxmto" path="res://assets/kenney/icons/mouseLeft.png" id="4_6pryj"]
 [ext_resource type="PackedScene" uid="uid://cuy1b3yluqbon" path="res://nodes/ExplosionTarget/ExplosionTarget.tscn" id="4_wj20d"]
 
-[node name="PlayerCamera" type="Node3D"]
+[node name="PlayerCamera" type="Node3D" node_paths=PackedStringArray("explosions_container_node_3d")]
 script = ExtResource("1_k3tdu")
 explosion_scene = ExtResource("3_yv63t")
+explosions_container_node_3d = NodePath("ExplosionsContainerNode3D")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 unique_name_in_owner = true
@@ -18,3 +20,49 @@ visible = false
 
 [node name="ExplosionsContainerNode3D" type="Node3D" parent="."]
 unique_name_in_owner = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -277.0
+offset_top = -322.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="OrbitHBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VFlowContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/VFlowContainer/OrbitHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_6pryj")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/VFlowContainer/OrbitHBoxContainer"]
+layout_mode = 2
+text = "Orbit"
+
+[node name="ZoomHBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/VFlowContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/VFlowContainer/ZoomHBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_6pryj")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/VFlowContainer/ZoomHBoxContainer2"]
+layout_mode = 2
+text = "Zoom"

@@ -1,15 +1,14 @@
-@tool
 extends Node3D
-class_name Player
+class_name PlayerCamera
 
 const RAY_LENGTH = 200.0
 const MOUSE_SENSITIVITY = 0.005
 
 @export var explosion_scene: PackedScene
 @export_range(5, 250, 1) var distance: float = 20.0 : set = _set_distance
+@export var explosions_container_node_3d: Node3D
 
 @onready var camera_3d: Camera3D = %Camera3D
-@onready var explosions_container_node_3d: Node3D = %ExplosionsContainerNode3D
 @onready var explosion_target: ExplosionTarget = %ExplosionTarget
 
 var zoom: float = 5.0 : set = _set_zoom
@@ -19,10 +18,11 @@ var _explosion_global_position: Vector3 = Vector3.ZERO : set = _set_explosion_gl
 
 
 func _set_distance(new_distance: float) -> void:
-	distance = clampf(new_distance,5, 250)
+	distance = clampf(new_distance, 5, 250)
 	
 	if camera_3d:
 		camera_3d.z = distance
+
 
 func _set_explosion_global_position(new_explosion_global_position: Vector3) -> void:
 	_explosion_global_position = new_explosion_global_position
@@ -54,11 +54,15 @@ func _input(event: InputEvent):
 	if event.is_action_released("mouse_click_left"):
 		#print("Player > event.is_action_released(mouse_click_left)")
 		
-		var explosion: ExplosionUsingArea2d = explosion_scene.instantiate()
-		explosions_container_node_3d.add_child(explosion)
-		explosion.explode_at_position(_explosion_global_position)
+		if explosions_container_node_3d:
+			var explosion: ExplosionUsingArea2d = explosion_scene.instantiate()
+			explosions_container_node_3d.add_child(explosion)
+			explosion.explode_at_position(_explosion_global_position)
+			
+			_explosion_global_position = Vector3.ZERO
 		
-		_explosion_global_position = Vector3.ZERO
+		else:
+			push_error("`explosions_container_node_3d` was not found")
 	
 	## Camera Orbit
 	if (
