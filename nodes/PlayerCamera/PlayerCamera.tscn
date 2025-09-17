@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjy8munmo030m"]
+[gd_scene load_steps=7 format=3 uid="uid://bjy8munmo030m"]
 
 [ext_resource type="Script" uid="uid://eq22er4oefw3" path="res://nodes/PlayerCamera/PlayerCamera.gd" id="1_k3tdu"]
 [ext_resource type="PackedScene" uid="uid://clb8s1j0qhby4" path="res://nodes/Explosion/ExplosionUsingArea2D.tscn" id="3_yv63t"]
-[ext_resource type="Texture2D" uid="uid://bs3vsgefoxmto" path="res://assets/kenney/icons/mouseLeft.png" id="4_6pryj"]
+[ext_resource type="Texture2D" uid="uid://4tysiyrx658o" path="res://assets/ui/mouse_left.png" id="4_i5y45"]
 [ext_resource type="PackedScene" uid="uid://cuy1b3yluqbon" path="res://nodes/ExplosionTarget/ExplosionTarget.tscn" id="4_wj20d"]
+[ext_resource type="Texture2D" uid="uid://bp241l78iycti" path="res://assets/ui/mouse_right.png" id="5_i5y45"]
+[ext_resource type="Texture2D" uid="uid://c0k4s0735nxm8" path="res://assets/ui/mouse_middle_wheel.png" id="6_i5y45"]
 
 [node name="PlayerCamera" type="Node3D" node_paths=PackedStringArray("explosions_container_node_3d")]
 script = ExtResource("1_k3tdu")
@@ -21,48 +23,65 @@ visible = false
 [node name="ExplosionsContainerNode3D" type="Node3D" parent="."]
 unique_name_in_owner = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UiCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
+[node name="RightSidebarVBoxContainer" type="VBoxContainer" parent="UiCanvasLayer"]
+anchors_preset = 11
+anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
+offset_left = -199.0
+offset_top = 19.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
 grow_vertical = 2
 
-[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -277.0
-offset_top = -322.0
-grow_horizontal = 0
-grow_vertical = 0
+[node name="ResetButton" type="Button" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
+layout_mode = 2
+text = "Reset"
 
-[node name="OrbitHBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VFlowContainer"]
+[node name="SpacerControl" type="Control" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExplosionHBoxContainer" type="HBoxContainer" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/VFlowContainer/OrbitHBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="UiCanvasLayer/RightSidebarVBoxContainer/ExplosionHBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_6pryj")
+texture = ExtResource("4_i5y45")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/VFlowContainer/OrbitHBoxContainer"]
+[node name="Label" type="Label" parent="UiCanvasLayer/RightSidebarVBoxContainer/ExplosionHBoxContainer"]
+layout_mode = 2
+text = "Explosion"
+
+[node name="OrbitHBoxContainer" type="HBoxContainer" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UiCanvasLayer/RightSidebarVBoxContainer/OrbitHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_i5y45")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="UiCanvasLayer/RightSidebarVBoxContainer/OrbitHBoxContainer"]
 layout_mode = 2
 text = "Orbit"
 
-[node name="ZoomHBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/VFlowContainer"]
+[node name="ZoomHBoxContainer" type="HBoxContainer" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/VFlowContainer/ZoomHBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="UiCanvasLayer/RightSidebarVBoxContainer/ZoomHBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_6pryj")
+texture = ExtResource("6_i5y45")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/VFlowContainer/ZoomHBoxContainer2"]
+[node name="Label" type="Label" parent="UiCanvasLayer/RightSidebarVBoxContainer/ZoomHBoxContainer"]
 layout_mode = 2
 text = "Zoom"
+
+[connection signal="pressed" from="UiCanvasLayer/RightSidebarVBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]

@@ -1,6 +1,7 @@
 extends Area3D
 class_name ExplosionUsingArea2d
 
+
 @onready var collision_shape_3d: CollisionShape3D = %CollisionShape3D
 
 var _worldspace: PhysicsDirectSpaceState3D
@@ -19,13 +20,12 @@ func explode_at_position(position: Vector3) -> void:
 
 
 func _on_body_entered(body: Node3D) -> void:
-	#print("ExplosionUsingArea2d > _on_body_entered > body = ", body)
+	print("ExplosionUsingArea2d > _on_body_entered > body = ", body)
 	
-	if body is BuildingBlock:
-		var building_block: BuildingBlock = body as BuildingBlock
+	if body is ModularBuildingBlock:
+		var building_block: ModularBuildingBlock = body as ModularBuildingBlock
 		
 		building_block.damage_from_explosion_position(global_position)
-			
 		
 		#(body as RigidBody3D).apply_impulse(global_position)
 	

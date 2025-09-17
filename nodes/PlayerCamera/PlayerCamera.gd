@@ -12,8 +12,6 @@ const MOUSE_SENSITIVITY = 0.005
 @onready var explosion_target: ExplosionTarget = %ExplosionTarget
 
 var zoom: float = 5.0 : set = _set_zoom
-var _is_mouse_left_being_pressed: bool = false
-var _is_mouse_right_being_pressed: bool = false
 var _explosion_global_position: Vector3 = Vector3.ZERO : set = _set_explosion_global_position
 
 
@@ -77,3 +75,9 @@ func _input(event: InputEvent):
 	
 	if event.is_action_released("mouse_wheel_down"):
 		zoom += 1
+
+
+#region Signals
+func _on_reset_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://experiments/sandbox.tscn")
+#endregion

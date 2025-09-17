@@ -3334,3 +3334,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 20.5, -4.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 21.5, -4.5)
 
 [node name="EmpireStateBuilding_Block1_Mesh2" parent="ModularBuildingBlock-778" instance=ExtResource("2_kfh68")]
+
+[editable path="ModularBuildingBlock-2"]
+[editable path="ModularBuildingBlock-2/EmpireStateBuilding_Block1_Mesh2"]

@@ -61,7 +61,7 @@ func _update_color() -> void:
 
 func damage_from_explosion_position(explosion_position: Vector3) -> void:
 	var distance: float = center_marker_3d.global_position.distance_squared_to(explosion_position)
-	#print("distance > ", distance)
+	print("distance > ", distance)
 	
 	var max_damage: float = 150.0
 	var max_splash_damage_distance: float = 0.5
