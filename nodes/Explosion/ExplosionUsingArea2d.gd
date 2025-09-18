@@ -3,6 +3,7 @@ class_name ExplosionUsingArea2d
 
 
 @onready var collision_shape_3d: CollisionShape3D = %CollisionShape3D
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 var _worldspace: PhysicsDirectSpaceState3D
 
@@ -17,6 +18,8 @@ func explode_at_position(position: Vector3) -> void:
 	#print("ExplosionUsingArea2d > explode_at_position > position = ", position)
 	
 	global_position = position
+	
+	animation_player.play()
 
 
 func _on_body_entered(body: Node3D) -> void:
@@ -28,5 +31,7 @@ func _on_body_entered(body: Node3D) -> void:
 		building_block.damage_from_explosion_position(global_position)
 		
 		#(body as RigidBody3D).apply_impulse(global_position)
-	
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	queue_free()
