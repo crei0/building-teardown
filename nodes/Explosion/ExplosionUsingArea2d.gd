@@ -19,7 +19,7 @@ func explode_at_position(position: Vector3) -> void:
 	
 	global_position = position
 	
-	animation_player.play()
+	animation_player.play("explode_animation")
 
 
 func _on_body_entered(body: Node3D) -> void:
@@ -33,5 +33,5 @@ func _on_body_entered(body: Node3D) -> void:
 		#(body as RigidBody3D).apply_impulse(global_position)
 
 
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	queue_free()

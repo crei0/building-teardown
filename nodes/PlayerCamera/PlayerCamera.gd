@@ -7,6 +7,7 @@ const MOUSE_SENSITIVITY = 0.005
 @export var explosion_scene: PackedScene
 @export_range(5, 250, 1) var distance: float = 20.0 : set = _set_distance
 @export var explosions_container_node_3d: Node3D
+@export var building_container_node_3d: Node3D : set = _set_building_container_node_3d
 
 @onready var camera_3d: Camera3D = %Camera3D
 @onready var explosion_target: ExplosionTarget = %ExplosionTarget
@@ -33,6 +34,16 @@ func _set_zoom(new_zoom: float) -> void:
 	zoom = clampf(new_zoom, 1, 20)
 	
 	camera_3d.position.z = zoom
+
+
+func _set_building_container_node_3d(new_building_container_node_3d: Node3D) -> void:
+	building_container_node_3d = new_building_container_node_3d
+	
+	if building_container_node_3d:
+		var aabb: AABB = _calculate_spatial_bounds(building_container_node_3d)
+		#print("Player > _set_building_container_node_3d() > aabb = ", aabb)
+		
+		position = aabb.get_center()
 
 
 func _input(event: InputEvent):
@@ -75,6 +86,31 @@ func _input(event: InputEvent):
 	
 	if event.is_action_released("mouse_wheel_down"):
 		zoom += 1
+
+
+# Based on https://www.reddit.com/r/godot/comments/18bfn0n/how_to_calculate_node3d_bounding_box/l058v0v/
+func _calculate_spatial_bounds(parent : Node3D) -> AABB:
+	var bounds : AABB = AABB()
+	if parent is VisualInstance3D:
+		bounds = parent.get_aabb();
+	
+	for i in range(parent.get_child_count()):
+		var child : Node3D = parent.get_child(i)
+		
+		if child:
+			var child_bounds : AABB = _calculate_spatial_bounds(child)
+			
+			if bounds.size == Vector3.ZERO && parent:
+				bounds = child_bounds
+			else:
+				bounds = bounds.merge(child_bounds)
+	
+	if bounds.size == Vector3.ZERO && !parent:
+		bounds = AABB(Vector3(-0.2, -0.2, -0.2), Vector3(0.4, 0.4, 0.4))
+	
+	bounds = parent.transform * bounds
+  
+	return bounds
 
 
 #region Signals

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c87r7ldit55w2"]
+
+[ext_resource type="Texture2D" uid="uid://crjr0qeno1or3" path="res://assets/building_blocks/EmpireStateBuilding/EmpireStateBuilding.Block1_BuildingTearDown.png" id="1_qbfq3"]
+
+[resource]
+resource_name = "EmpireStateBuilding.Block1.Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_qbfq3")
+texture_filter = 0

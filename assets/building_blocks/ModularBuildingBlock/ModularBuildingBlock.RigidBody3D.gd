@@ -10,7 +10,6 @@ class_name ModularBuildingBlock
 @onready var pin_joint_3d_x_red_depth: PinJoint3D = %"PinJoint3D-X-Red-Depth"
 @onready var pin_joint_3d_y_green_height: PinJoint3D = %"PinJoint3D-Y-Green-Height"
 @onready var pin_joint_3d_z_blue_width: PinJoint3D = %"PinJoint3D-Z-Blue-Width"
-@onready var center_marker_3d: Marker3D = %CenterMarker3D # TODO: Replace this with calculation of AABB or CollisionShape?
 
 var _mesh: Node3D
 
@@ -26,11 +25,29 @@ func _set_health(new_health: float) -> void:
 	else:
 		_update_color()
 
+#func _physics_process(_delta: float) -> void:
+	#if neighbours:
+		#print("ModularBuildingBlock > _physics_process() > neighbours.neighbour_x_red_depth = ", neighbours.neighbour_x_red_depth)
+		#
+		#print("ModularBuildingBlock > _physics_process() > get_colliding_bodies().size() = ", get_colliding_bodies().size())
+		#
+		#
+		#if !neighbours.neighbour_x_red_depth:
+			#neighbours.neighbour_x_red_depth = _find_neighbour_using_raycast(ray_cast_3d_x_red_depth)
+	#
+		#if !neighbours.neighbour_y_green_height:
+				#neighbours.neighbour_y_green_height = _find_neighbour_using_raycast(ray_cast_3d_y_green_height)
+		#
+		#if !neighbours.neighbour_z_blue_width:
+				#neighbours.neighbour_z_blue_width = _find_neighbour_using_raycast(ray_cast_3d_z_blue_width)
+
 
 func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 	neighbours = new_neighbours
 	
 	if pin_joint_3d_x_red_depth:
+		#print("ModularBuildingBlock > _set_neighbours() > neighbours.neighbour_x_red_depth = ", neighbours.neighbour_x_red_depth)
+		
 		# X | Depth
 		if !neighbours.neighbour_x_red_depth:
 			pin_joint_3d_x_red_depth.node_a = ""
@@ -45,11 +62,13 @@ func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 		if !neighbours.neighbour_y_green_height:
 			pin_joint_3d_y_green_height.node_a = ""
 			pin_joint_3d_y_green_height.node_b = ""
+			ray_cast_3d_x_red_depth.debug_shape_custom_color = Color.RED
 			
 		else:
 			print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_y_green_height")
 			pin_joint_3d_y_green_height.node_a = get_path()
 			pin_joint_3d_y_green_height.node_b = neighbours.neighbour_y_green_height.get_path()
+			ray_cast_3d_y_green_height.debug_shape_custom_color = Color.RED
 		
 		# Z | Width
 		if !neighbours.neighbour_z_blue_width:
@@ -60,6 +79,7 @@ func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 			print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_z_blue_width")
 			pin_joint_3d_z_blue_width.node_a = get_path()
 			pin_joint_3d_z_blue_width.node_b = neighbours.neighbour_z_blue_width.get_path()
+			ray_cast_3d_z_blue_width.debug_shape_custom_color = Color.RED
 
 
 func _ready() -> void:
@@ -83,19 +103,13 @@ func find_neighbours() -> ModularBuildingBlockNeighbours:
 
 
 func _find_neighbour_using_raycast(ray_cast_3d: RayCast3D) -> ModularBuildingBlock:
-		# TODO: Test this
+		#print("ModularBuildingBlock > _find_neighbour_using_raycast() > get_colliding_bodies().size() = ", get_colliding_bodies().size())
+		var colliding_modular_building_block: ModularBuildingBlock = ray_cast_3d.get_collider()
 		
-		if get_colliding_bodies().size():
-			print("ModularBuildingBlock > _find_neighbour_using_raycast() > get_colliding_bodies().size() = ", get_colliding_bodies().size())
-			
+		#if colliding_modular_building_block:
+			#print("ModularBuildingBlock > _find_neighbour_using_raycast() > found colliding_modular_building_block = ", colliding_modular_building_block)
 		
-		for colliding_body in get_colliding_bodies():
-			if colliding_body is ModularBuildingBlock:
-				print("ModularBuildingBlock > _find_neighbour_using_raycast() > found colliding_body = ", colliding_body)
-				
-				return colliding_body
-		
-		return null
+		return colliding_modular_building_block
 
 
 func _update_color() -> void:
@@ -120,8 +134,8 @@ func _update_color() -> void:
 
 
 func damage_from_explosion_position(explosion_position: Vector3) -> void:
-	var distance: float = center_marker_3d.global_position.distance_squared_to(explosion_position)
-	print("distance > ", distance)
+	var distance: float = global_position.distance_squared_to(explosion_position)
+	#print("distance > ", distance)
 	
 	#var max_damage: float = 150.0
 	#var max_splash_damage_distance: float = 0.5
