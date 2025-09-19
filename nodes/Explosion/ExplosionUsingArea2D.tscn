@@ -58,12 +58,13 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_5k7eq"]
 resource_name = "explode_animation"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -278,6 +279,8 @@ draw_pass_1 = SubResource("SphereMesh_5k7eq")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamRandomizer_rxfla")
+unit_size = 10000.0
+max_polyphony = 4
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

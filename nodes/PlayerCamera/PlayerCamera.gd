@@ -1,8 +1,9 @@
 extends Node3D
 class_name PlayerCamera
 
-const RAY_LENGTH = 200.0
-const MOUSE_SENSITIVITY = 0.005
+const RAY_LENGTH: float = 200.0
+const MOUSE_SENSITIVITY: float = 0.005
+const MOUSE_ZOOM_DELTA: float = 0.5
 
 @export var explosion_scene: PackedScene
 @export_range(5, 250, 1) var distance: float = 20.0 : set = _set_distance
@@ -15,7 +16,7 @@ const MOUSE_SENSITIVITY = 0.005
 var zoom: float = 5.0 : set = _set_zoom
 var _explosion_global_position: Vector3 = Vector3.ZERO : set = _set_explosion_global_position
 
-
+#region Setters
 func _set_distance(new_distance: float) -> void:
 	distance = clampf(new_distance, 5, 250)
 	
@@ -31,7 +32,7 @@ func _set_explosion_global_position(new_explosion_global_position: Vector3) -> v
 
 
 func _set_zoom(new_zoom: float) -> void:
-	zoom = clampf(new_zoom, 1, 20)
+	zoom = clampf(new_zoom, 3, 20)
 	
 	camera_3d.position.z = zoom
 
@@ -44,6 +45,15 @@ func _set_building_container_node_3d(new_building_container_node_3d: Node3D) -> 
 		#print("Player > _set_building_container_node_3d() > aabb = ", aabb)
 		
 		position = aabb.get_center()
+#endregion
+
+func _ready() -> void:
+	_post_ready.call_deferred()
+
+
+func _post_ready() -> void:
+	# Force initialization
+	camera_3d.position.z = zoom
 
 
 func _input(event: InputEvent):
@@ -81,16 +91,17 @@ func _input(event: InputEvent):
 		rotation.y -= event.relative.x * MOUSE_SENSITIVITY
 		rotation.x -= event.relative.y * MOUSE_SENSITIVITY
 
-	if event.is_action_released("mouse_wheel_up"):
-		zoom -= 1
+	if event.is_action_released(Globals.INPUT_MOUSE_WHEEL_UP):
+		zoom -= MOUSE_ZOOM_DELTA
 	
-	if event.is_action_released("mouse_wheel_down"):
-		zoom += 1
+	if event.is_action_released(Globals.INPUT_MOUSE_WHEEL_DOWN):
+		zoom += MOUSE_ZOOM_DELTA
 
 
 # Based on https://www.reddit.com/r/godot/comments/18bfn0n/how_to_calculate_node3d_bounding_box/l058v0v/
 func _calculate_spatial_bounds(parent : Node3D) -> AABB:
 	var bounds : AABB = AABB()
+	
 	if parent is VisualInstance3D:
 		bounds = parent.get_aabb();
 	
@@ -102,6 +113,7 @@ func _calculate_spatial_bounds(parent : Node3D) -> AABB:
 			
 			if bounds.size == Vector3.ZERO && parent:
 				bounds = child_bounds
+			
 			else:
 				bounds = bounds.merge(child_bounds)
 	
@@ -115,5 +127,5 @@ func _calculate_spatial_bounds(parent : Node3D) -> AABB:
 
 #region Signals
 func _on_reset_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://experiments/sandbox.tscn")
+	Utilities.load_sandbox_scene()
 #endregion

@@ -15,16 +15,12 @@ func _ready() -> void:
 
 
 func explode_at_position(position: Vector3) -> void:
-	#print("ExplosionUsingArea2d > explode_at_position > position = ", position)
-	
 	global_position = position
 	
 	animation_player.play("explode_animation")
 
 
 func _on_body_entered(body: Node3D) -> void:
-	print("ExplosionUsingArea2d > _on_body_entered > body = ", body)
-	
 	if body is ModularBuildingBlock:
 		var building_block: ModularBuildingBlock = body as ModularBuildingBlock
 		
@@ -34,4 +30,5 @@ func _on_body_entered(body: Node3D) -> void:
 
 
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
-	queue_free()
+	if _anim_name == "explode_animation":
+		queue_free()

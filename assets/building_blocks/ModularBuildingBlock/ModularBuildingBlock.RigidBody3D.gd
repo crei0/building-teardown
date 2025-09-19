@@ -54,7 +54,7 @@ func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 			pin_joint_3d_x_red_depth.node_b = ""
 			
 		else:
-			print("ModularBuildingBlock > _set_neighbours() > found neighbours.neighbour_x_red_depth")
+			#print("ModularBuildingBlock > _set_neighbours() > found neighbours.neighbour_x_red_depth")
 			pin_joint_3d_x_red_depth.node_a = get_path()
 			pin_joint_3d_x_red_depth.node_b = neighbours.neighbour_x_red_depth.get_path()
 		
@@ -65,7 +65,7 @@ func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 			ray_cast_3d_x_red_depth.debug_shape_custom_color = Color.RED
 			
 		else:
-			print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_y_green_height")
+			#print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_y_green_height")
 			pin_joint_3d_y_green_height.node_a = get_path()
 			pin_joint_3d_y_green_height.node_b = neighbours.neighbour_y_green_height.get_path()
 			ray_cast_3d_y_green_height.debug_shape_custom_color = Color.RED
@@ -76,7 +76,7 @@ func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 			pin_joint_3d_z_blue_width.node_b = ""
 			
 		else:
-			print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_z_blue_width")
+			#print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_z_blue_width")
 			pin_joint_3d_z_blue_width.node_a = get_path()
 			pin_joint_3d_z_blue_width.node_b = neighbours.neighbour_z_blue_width.get_path()
 			ray_cast_3d_z_blue_width.debug_shape_custom_color = Color.RED
