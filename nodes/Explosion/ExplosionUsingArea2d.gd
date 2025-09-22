@@ -11,7 +11,7 @@ var _worldspace: PhysicsDirectSpaceState3D
 func _ready() -> void:
 	_worldspace = get_world_3d().direct_space_state
 	
-	scale = Vector3.ONE * Globals.EXPLOSION_SCALE
+	scale = Vector3.ONE * Globals.BASE_EXPLOSION_SCALE
 
 
 func explode_at_position(position: Vector3) -> void:

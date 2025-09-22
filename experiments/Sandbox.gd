@@ -1,8 +1,8 @@
 extends Node3D
 class_name Sandbox
 
-@onready var building_container_node_3d: Node3D = %BuildingContainerNode3D
 
+@onready var building_container_node_3d: Node3D = %BuildingContainerNode3D
 
 var _currently_active_building_type: Globals.BuildingType = Globals.BuildingType.EmpireState : set = _set_currently_active_building_type
 
@@ -35,13 +35,14 @@ func _set_currently_active_building_type(new_currently_active_building_type: Glo
 	
 	if building_blocks_scene:
 		building_container_node_3d.add_child(building_blocks_scene.instantiate())
+
+		# TODO: To fix this
+		# Globals.building_currently_active_was_changed.emit(_currently_active_building_type)
 #endregion
 
 
 func _ready() -> void:
 	Globals.building_currently_active_was_changed.connect(_on_building_currently_active_was_changed)
-
-	Globals.building_currently_active_was_changed.emit(Globals.BuildingType.EmpireState)
 
 
 func _on_building_currently_active_was_changed(target_building_type: Globals.BuildingType) -> void:

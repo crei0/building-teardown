@@ -46,7 +46,7 @@ func _set_building_container_node_3d(new_building_container_node_3d: Node3D) -> 
 
 
 func _ready() -> void:
-	Globals.building_currently_active_was_changed.connect(_on_building_currently_active_was_changed)
+	Globals.building_recalculated_camera_position.connect(_on_building_recalculated_camera_position)
 
 	_post_ready.call_deferred()
 
@@ -141,6 +141,10 @@ func _on_load_building_option_button_item_selected(index: int) -> void:
 	Globals.building_currently_active_was_changed.emit(index as Globals.BuildingType)
 
 
-func _on_building_currently_active_was_changed(building_type: Globals.BuildingType) -> void:
+func _on_building_recalculated_camera_position() -> void:
 	_recalculate_aabb()
+
+
+func _on_explosion_size_h_slider_value_changed(value: float) -> void:
+	Globals.explosion_size_multiplier_changed.emit(value)
 #endregion
