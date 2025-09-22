@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcljqpuc10g71"]
+
+[ext_resource type="PackedScene" uid="uid://c83pb5ykuw0qq" path="res://assets/building_blocks/OldBridge/OldBridge.Block1.Mesh.glb" id="1_2t6sj"]
+[ext_resource type="Material" uid="uid://dvttxxjmrpeq0" path="res://assets/building_blocks/BuildingTearDown.Blocks.StandardMaterial3D.tres" id="2_b4fbd"]
+
+[node name="OldBridge_Block1_MeshBLock" instance=ExtResource("1_2t6sj")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_b4fbd")

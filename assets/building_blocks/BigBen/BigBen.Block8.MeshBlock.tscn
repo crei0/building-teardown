@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://clljk7ew67jfp"]
+
+[ext_resource type="PackedScene" uid="uid://clcnyoqq21dn7" path="res://assets/building_blocks/BigBen/BigBen.Block8.Mesh.glb" id="1_vvgxs"]
+[ext_resource type="Material" uid="uid://dvttxxjmrpeq0" path="res://assets/building_blocks/BuildingTearDown.Blocks.StandardMaterial3D.tres" id="2_f52tb"]
+
+[node name="BigBen_Block8_MeshBlock" instance=ExtResource("1_vvgxs")]
+
+[node name="BigBen_Block8_Mesh" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_f52tb")

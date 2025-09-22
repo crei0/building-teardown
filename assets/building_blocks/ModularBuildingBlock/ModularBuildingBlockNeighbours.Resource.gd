@@ -1,7 +1,0 @@
-extends Resource
-class_name ModularBuildingBlockNeighbours
-
-
-var neighbour_y_green_height: ModularBuildingBlock
-var neighbour_z_blue_width: ModularBuildingBlock
-var neighbour_x_red_depth: ModularBuildingBlock

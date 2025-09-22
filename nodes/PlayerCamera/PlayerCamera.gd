@@ -16,6 +16,7 @@ const MOUSE_ZOOM_DELTA: float = 0.5
 var zoom: float = 5.0 : set = _set_zoom
 var _explosion_global_position: Vector3 = Vector3.ZERO : set = _set_explosion_global_position
 
+
 #region Setters
 func _set_distance(new_distance: float) -> void:
 	distance = clampf(new_distance, 5, 250)
@@ -70,7 +71,7 @@ func _input(event: InputEvent):
 			if result and result.position:
 				_explosion_global_position = result.position
 	
-	if event.is_action_released("mouse_click_left"):
+	if event.is_action_released(Globals.INPUT_MOUSE_LEFT):
 		#print("Player > event.is_action_released(mouse_click_left)")
 		
 		if explosions_container_node_3d:
@@ -126,6 +127,10 @@ func _calculate_spatial_bounds(parent : Node3D) -> AABB:
 
 
 #region Signals
-func _on_reset_button_pressed() -> void:
+func _on_reload_buidling_button_pressed() -> void:
 	Utilities.load_sandbox_scene()
+
+
+func _on_load_building_option_button_item_selected(index: int) -> void:
+	Globals.building_currently_active_was_changed.emit(index as Globals.BuildingType)
 #endregion

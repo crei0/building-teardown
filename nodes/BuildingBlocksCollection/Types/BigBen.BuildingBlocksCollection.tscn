@@ -1,0 +1,1277 @@
+[gd_scene load_steps=12 format=3 uid="uid://djchs68dhfu5c"]
+
+[ext_resource type="Script" uid="uid://meuwobpft3b2" path="res://nodes/BuildingBlocksCollection/BuildingBlocksCollection.gd" id="1_rwtn4"]
+[ext_resource type="PackedScene" uid="uid://chv8bkmlkinhu" path="res://nodes/ModularBuildingBlock/ModularBuildingBlock.tscn" id="2_th7a3"]
+[ext_resource type="PackedScene" uid="uid://6hdwp60oe705" path="res://assets/building_blocks/BigBen/BigBen.Block1.MeshBlock.tscn" id="3_rwtn4"]
+[ext_resource type="PackedScene" uid="uid://ckc651pgd55s7" path="res://assets/building_blocks/BigBen/BigBen.Block2.MeshBlock.tscn" id="4_th7a3"]
+[ext_resource type="PackedScene" uid="uid://c6isrlu7bm55p" path="res://assets/building_blocks/BigBen/BigBen.Block7.MeshBlock.tscn" id="5_r81g5"]
+[ext_resource type="PackedScene" uid="uid://clljk7ew67jfp" path="res://assets/building_blocks/BigBen/BigBen.Block8.MeshBlock.tscn" id="6_wvofo"]
+[ext_resource type="PackedScene" uid="uid://ce45v5aobrcbe" path="res://assets/building_blocks/BigBen/BigBen.Block3.MeshBlock.tscn" id="7_b60j2"]
+[ext_resource type="PackedScene" uid="uid://mdc6ma0jfa3h" path="res://assets/building_blocks/BigBen/BigBen.Block4.MeshBlock.tscn" id="8_pehl2"]
+[ext_resource type="PackedScene" uid="uid://68ufagjpfowq" path="res://assets/building_blocks/BigBen/BigBen.Block5.MeshBlock.tscn" id="9_6fxre"]
+[ext_resource type="PackedScene" uid="uid://k4bcqlyyw7oq" path="res://assets/building_blocks/BigBen/BigBen.Block6.MeshBlock.tscn" id="10_7g4vf"]
+[ext_resource type="PackedScene" uid="uid://dd8lmibgih6f" path="res://assets/building_blocks/BigBen/BigBen.Block9.MeshBlock.tscn" id="11_x4wdw"]
+
+[node name="Basic_2x2x4_BuildingBlocksCollection" type="Node3D"]
+script = ExtResource("1_rwtn4")
+
+[node name="PinJointsContainerNode3D" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+
+[node name="BlocksContainerNode3D" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
+
+[node name="ModularBuildingBlock-1" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-1" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-2" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-2" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-3" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-3" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-4" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-4" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-5" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-5" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-6" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-6" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-7" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-7" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-8" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-8" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-9" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-9" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-28" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-28" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-29" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-29" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-30" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-30" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-31" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-31" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-32" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-32" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-33" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-33" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-34" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-34" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-35" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-35" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-36" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-36" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-10" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-10" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-11" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-11" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-12" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-12" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-13" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-13" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-14" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-14" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-15" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-15" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-16" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -2)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-16" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-17" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-17" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-18" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-18" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-19" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-19" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-20" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-20" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-21" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-21" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-22" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-22" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-23" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-23" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-24" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-24" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-25" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -2)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-25" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-26" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-26" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-27" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-27" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-37" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-37" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-38" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-38" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-39" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 6, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-39" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-40" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-40" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-41" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-41" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-42" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 6, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-42" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-43" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-43" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-44" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-44" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-45" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 6, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-45" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-46" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-46" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-47" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-47" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-48" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-48" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-49" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-49" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-50" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-50" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-51" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 0)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-51" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-52" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -2)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-52" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-53" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-53" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-54" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-54" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-55" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-55" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-56" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-56" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-57" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-57" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-58" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-58" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-59" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-59" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-60" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-60" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-61" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -2)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-61" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-62" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-62" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-63" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-63" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-64" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-64" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-65" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 9, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-65" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-66" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 9, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-66" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-67" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-67" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-68" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 9, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-68" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-69" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 9, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-69" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-70" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-70" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-71" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 9, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-71" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-72" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 9, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-72" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-103" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-103" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-104" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 10, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-104" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-105" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-105" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-106" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-106" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-107" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 10, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-107" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-108" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-108" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-109" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-109" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-110" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 10, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-110" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-111" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-111" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-112" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-112" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-113" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 11, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-113" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-114" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 11, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-114" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-115" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-115" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-116" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 11, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-116" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-117" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 11, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-117" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-118" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-118" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-119" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 11, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-119" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-120" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 11, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-120" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-121" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-121" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-122" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 12, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-122" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-123" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 12, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-123" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-124" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-124" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-125" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 12, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-125" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-126" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 12, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-126" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-127" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-127" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-128" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 12, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-128" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-129" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 12, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-129" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-130" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-130" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-131" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 13, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-131" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-132" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 13, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-132" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-133" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-133" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-134" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 13, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-134" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-135" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 13, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-135" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-136" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-136" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-137" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 13, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-137" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-138" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 13, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-138" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-73" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-73" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-74" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 7, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-74" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-75" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 7, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-75" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-76" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-76" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-77" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 7, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-77" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-78" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 7, 0)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-78" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-79" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 7, -2)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-79" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-80" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 7, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-80" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-81" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-81" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-82" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-82" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-83" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-83" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-84" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-84" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-85" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-85" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-86" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-86" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-87" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8, 0)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-87" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-88" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8, -2)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-88" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-89" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-89" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-90" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -1)
+
+[node name="BigBen_Block2_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-90" instance=ExtResource("4_th7a3")]
+
+[node name="ModularBuildingBlock-91" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 1)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-91" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-92" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 10, 1)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-92" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-93" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10, 1)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-93" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-102" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0000001, 10, 0)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-102" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-141" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0000001, 10, -1)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-141" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-142" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0000001, 10, -2)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-142" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-143" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1920929e-07, 10, -3)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-143" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-1, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -8.742278e-08, -1, 4.371139e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-144" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999999, 10, -3)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-144" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-1, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -8.742278e-08, -1, 4.371139e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-145" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10, -3)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-145" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-1, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -8.742278e-08, -1, 4.371139e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-146" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, -2)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-146" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1.3113416e-07, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, 1.3113416e-07, -5.7320566e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-147" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, -1)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-147" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1.3113416e-07, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, 1.3113416e-07, -5.7320566e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-148" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, 0)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-148" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1.3113416e-07, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, 1.3113416e-07, -5.7320566e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-139" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1.0000001, 10, 1)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-139" instance=ExtResource("6_wvofo")]
+transform = Transform3D(-3.9340247e-07, 1.5285468e-14, -1, -8.742278e-08, -1, 1.9106854e-14, -1, 8.742278e-08, 3.9340247e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-163" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1.0000001, 10, 1)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-163" instance=ExtResource("6_wvofo")]
+transform = Transform3D(-3.9340247e-07, 1.5285468e-14, -1, -8.742278e-08, -1, 1.9106854e-14, -1, 8.742278e-08, 3.9340247e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-164" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1.0000001, 14, 1)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-164" instance=ExtResource("6_wvofo")]
+transform = Transform3D(1, 3.332249e-27, 2.842171e-14, 0, 1, 0, -2.842171e-14, 1.5246593e-20, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-165" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 14, 1)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-165" instance=ExtResource("6_wvofo")]
+transform = Transform3D(-4.3711424e-08, 1.5246593e-20, 1, 0, 1, 0, -1, -3.998699e-27, -4.3711424e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-166" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 14, -3)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-166" instance=ExtResource("6_wvofo")]
+transform = Transform3D(-1, -4.665149e-27, -8.742282e-08, 0, 1, 0, 8.742282e-08, -1.5246593e-20, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-167" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 14, -3)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-167" instance=ExtResource("6_wvofo")]
+transform = Transform3D(1.3113421e-07, -1.5246593e-20, -1, 0, 1, 0, 1, 5.331599e-27, 1.3113421e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-140" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 10, 1)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-140" instance=ExtResource("6_wvofo")]
+transform = Transform3D(-1, 8.742278e-08, 4.3711387e-07, -8.742278e-08, -1, 1.9106854e-14, 4.3711387e-07, -1.910685e-14, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-149" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 10, -3)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-149" instance=ExtResource("6_wvofo")]
+transform = Transform3D(4.808253e-07, -2.2928237e-14, 1, -8.742278e-08, -1, 1.9106854e-14, 1, -8.742278e-08, -4.808253e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-162" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 10, -3)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-162" instance=ExtResource("6_wvofo")]
+transform = Transform3D(1, -8.742278e-08, -5.245367e-07, -8.742278e-08, -1, 1.9106854e-14, -5.245367e-07, 2.6749622e-14, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-150" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 11, -3)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-150" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-151" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 12, -3)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-151" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-152" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 13, -3)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-152" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-153" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 11, -3)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-153" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-154" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 12, -3)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-154" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-155" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 13, -3)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-155" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-156" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 11, 1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-156" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-157" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 12, 1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-157" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-158" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 13, 1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-158" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-159" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 11, 1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-159" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-160" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 12, 1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-160" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-161" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 13, 1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-161" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-170" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 13, 1)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-170" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-4.3711356e-08, 1, 1.7484555e-07, -1, -4.371139e-08, 1.7484555e-07, 1.7484555e-07, -1.7484555e-07, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-171" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 13, 1)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-171" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-1, 8.742278e-08, 3.496911e-07, -8.742278e-08, -1, 1.4210855e-14, 3.496911e-07, -1.074629e-15, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-172" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 11, 1)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-172" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-4.3711356e-08, -1, 1.7484555e-07, 1, -4.371139e-08, -1.7484555e-07, 1.7484555e-07, 1.7484555e-07, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-173" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 12, 1)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-173" instance=ExtResource("9_6fxre")]
+
+[node name="ModularBuildingBlock-174" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 12, 1)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-174" instance=ExtResource("9_6fxre")]
+transform = Transform3D(0.02404835, 0, -0.9997108, 0, 1, 0, 0.9997108, 0, 0.02404835, 0, 0, 0)
+
+[node name="ModularBuildingBlock-175" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 13, 1)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-175" instance=ExtResource("9_6fxre")]
+transform = Transform3D(1.737438e-07, -1, 4.7903463e-08, 0.024048176, -4.371139e-08, -0.9997108, 0.9997108, 1.7484555e-07, 0.024048176, 0, 0, 0)
+
+[node name="ModularBuildingBlock-168" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 11, 1)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-168" instance=ExtResource("8_pehl2")]
+
+[node name="ModularBuildingBlock-169" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 11, 1)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-169" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-4.3711356e-08, -1, 1.7484555e-07, 1, -4.371139e-08, -1.7484555e-07, 1.7484555e-07, 1.7484555e-07, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-176" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 12, 1)
+
+[node name="BigBen_Block6_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-176" instance=ExtResource("10_7g4vf")]
+
+[node name="ModularBuildingBlock-177" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 13, -3)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-177" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-1, -8.742278e-08, 3.496911e-07, 8.742278e-08, -1, -1.4210855e-14, 3.496911e-07, 1.074629e-15, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-178" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 13, -3)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-178" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-4.3711356e-08, -1, 1.7484555e-07, 1, -4.371139e-08, -1.7484555e-07, 1.7484558e-07, 1.7484557e-07, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-179" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 11, -3)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-179" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-4.3711356e-08, 1, 1.7484557e-07, -1, -4.371139e-08, 1.7484555e-07, 1.7484555e-07, -1.7484555e-07, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-180" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 12, -3)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-180" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-1, 8.742278e-08, 3.496911e-07, -8.742278e-08, -1, 1.5285484e-14, 3.496911e-07, -1.5285484e-14, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-181" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 12, -3)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-181" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-0.9997108, 0, -0.024048308, 0, 1, 0, 0.024048308, 0, -0.9997108, 0, 0, 0)
+
+[node name="ModularBuildingBlock-182" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 13, -3)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-182" instance=ExtResource("9_6fxre")]
+transform = Transform3D(1.7374383e-07, 1, 4.7903463e-08, -0.024048176, -4.371139e-08, 0.9997108, 0.9997108, -1.7484555e-07, 0.024048176, 0, 0, 0)
+
+[node name="ModularBuildingBlock-183" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 11, -3)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-183" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-4.3711356e-08, 1, 1.7484555e-07, -1, -4.371139e-08, 1.7484555e-07, 1.7484555e-07, -1.7484555e-07, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-184" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 11, -3)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-184" instance=ExtResource("8_pehl2")]
+transform = Transform3D(1, 2.4847048e-21, -1.4210855e-14, -1.4034557e-15, 1, 1.4210855e-14, -1.4210855e-14, 1.4210855e-14, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-185" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 12, -3)
+
+[node name="BigBen_Block6_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-185" instance=ExtResource("10_7g4vf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-207" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 13, 0)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-207" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-1, -2.6226832e-07, 1.7484555e-07, -1.7484555e-07, 4.3711402e-08, -1, 2.6226832e-07, -1, -4.3711434e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-208" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 13, -2)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-208" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-1, 8.742278e-08, 3.496911e-07, -8.742278e-08, -1, 1.4210855e-14, 3.496911e-07, 1.3136226e-14, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-209" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 11, -1)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-209" instance=ExtResource("9_6fxre")]
+transform = Transform3D(1, 1.7484555e-07, -1.7484557e-07, -1.7484554e-07, -4.3711374e-08, -1, -1.7484555e-07, 1, -4.3711356e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-210" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 12, 0)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-210" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-1, 8.742276e-08, 0, 8.742276e-08, 1, -8.742279e-08, -1.4210855e-14, -8.742279e-08, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-211" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 12, -2)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-211" instance=ExtResource("9_6fxre")]
+transform = Transform3D(0.02404835, 0, -0.9997108, 0, 1, 0, 0.9997108, 0, 0.02404835, 0, 0, 0)
+
+[node name="ModularBuildingBlock-212" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 13, -1)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-212" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-0.9997108, -2.1855693e-07, -0.024048176, 0.024048176, -4.371139e-08, -0.9997108, 2.1744253e-07, -1, 4.895464e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-213" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 11, 0)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-213" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-1.7484554e-07, -2.1855695e-07, -1, 1, -4.371139e-08, -1.7484552e-07, -4.3711353e-08, -1, 2.1855696e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-214" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 11, -2)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-214" instance=ExtResource("8_pehl2")]
+transform = Transform3D(1, 1.7484555e-07, -1.7484557e-07, -1.7484554e-07, -4.3711402e-08, -1, -1.7484555e-07, 1, -4.3711342e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-215" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1, 12, -1)
+
+[node name="BigBen_Block6_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-215" instance=ExtResource("10_7g4vf")]
+transform = Transform3D(-1, -1.7484555e-07, 8.742277e-08, -8.742278e-08, -4.371139e-08, -1, 1.7484555e-07, -1, 4.3711374e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-186" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 13, -2)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-186" instance=ExtResource("8_pehl2")]
+transform = Transform3D(3.934025e-07, 4.8960105e-15, 1, 8.742278e-08, -1, -1.4210855e-14, 1, 8.742278e-08, -3.934025e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-187" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 13, 0)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-187" instance=ExtResource("8_pehl2")]
+transform = Transform3D(1, 1.5285479e-14, -3.496911e-07, -1.3882032e-14, -1, -8.742279e-08, -3.496911e-07, 8.742275e-08, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-188" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 11, -1)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-188" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-1, -2.6226832e-07, 1.7484555e-07, -1.7484555e-07, 4.3711402e-08, -1, 2.6226832e-07, -1, -4.371145e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-189" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 12, -2)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-189" instance=ExtResource("9_6fxre")]
+transform = Transform3D(3.934025e-07, -1.9106863e-14, 1, -8.742278e-08, -1, 1.5285484e-14, 1, -8.742278e-08, -3.934025e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-190" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 12, 0)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-190" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-0.024048265, 0, 0.9997108, 0, 1, 0, -0.9997108, 0, -0.024048265, 0, 0, 0)
+
+[node name="ModularBuildingBlock-191" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 13, -1)
+
+[node name="BigBen_Block5_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-191" instance=ExtResource("9_6fxre")]
+transform = Transform3D(-0.02404818, -2.6226834e-07, 0.9997109, -0.9997108, 4.3711402e-08, -0.024048176, -3.7391693e-08, -1.0000001, -2.632437e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-192" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 11, -2)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-192" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-1, -8.742276e-08, 0, -8.742276e-08, 1, 8.742279e-08, -1.4210855e-14, 8.7422805e-08, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-193" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 11, 0)
+
+[node name="BigBen_Block4_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-193" instance=ExtResource("8_pehl2")]
+transform = Transform3D(-4.371138e-08, -1.4210855e-14, -1, -1.4034557e-15, 1, 1.4210855e-14, 1, 1.8635283e-21, -4.371141e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-194" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 3, 12, -0.9999999)
+
+[node name="BigBen_Block6_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-194" instance=ExtResource("10_7g4vf")]
+transform = Transform3D(-1, -1.5285484e-14, 2.6226832e-07, -7.642742e-15, -1, -8.742278e-08, 2.6226832e-07, -8.742278e-08, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-195" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9999993, 14, -2)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-195" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-5.7320566e-15, 6.571294e-29, 1, 1.3113416e-07, 1, 1.43620205e-36, -1, 1.3113416e-07, -5.7320566e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-196" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9999995, 14, -0.9999999)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-196" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-5.7320566e-15, 6.571294e-29, 1, 1.3113416e-07, 1, 1.43620205e-36, -1, 1.3113416e-07, -5.7320566e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-197" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9999998, 14, 0)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-197" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-5.7320566e-15, 6.571294e-29, 1, 1.3113416e-07, 1, 1.43620205e-36, -1, 1.3113416e-07, -5.7320566e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-198" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999995, 14, 0.99999994)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-198" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1, -1.3113416e-07, -4.371138e-08, 1.3113416e-07, 1, 2.8724041e-36, 4.371138e-08, -5.732056e-15, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-199" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99999976, 14, 0.9999999)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-199" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1, -1.3113416e-07, -4.371138e-08, 1.3113416e-07, 1, 2.8724041e-36, 4.371138e-08, -5.732056e-15, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-200" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1920929e-06, 14, 0.99999994)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-200" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1, -1.3113416e-07, -4.371138e-08, 1.3113416e-07, 1, 2.8724041e-36, 4.371138e-08, -5.732056e-15, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-201" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.000001, 14, -2.9802322e-07)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-201" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-8.742277e-08, 1.1464112e-14, -1, 1.3113416e-07, 1, 5.7448082e-36, 1, -1.3113416e-07, -8.742277e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-202" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.000001, 14, -1.0000001)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-202" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-8.742277e-08, 1.1464112e-14, -1, 1.3113416e-07, 1, 5.7448082e-36, 1, -1.3113416e-07, -8.742277e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-203" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.000001, 14, -2.0000005)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-203" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-8.742277e-08, 1.1464112e-14, -1, 1.3113416e-07, 1, 5.7448082e-36, 1, -1.3113416e-07, -8.742277e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-204" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66893e-06, 14, -2.9999995)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-204" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-1, 1.3113416e-07, 1.3113416e-07, 1.3113416e-07, 1, 1.14896164e-35, -1.3113416e-07, 1.7196168e-14, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-205" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99999857, 14, -2.9999993)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-205" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-1, 1.3113416e-07, 1.3113416e-07, 1.3113416e-07, 1, 1.14896164e-35, -1.3113416e-07, 1.7196168e-14, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-206" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999979, 14, -2.9999998)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-206" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-1, 1.3113416e-07, 1.3113416e-07, 1.3113416e-07, 1, 1.14896164e-35, -1.3113416e-07, 1.7196168e-14, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-216" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-216" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-217" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 14, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-217" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-218" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 14, 0)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-218" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-219" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-219" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-220" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 14, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-220" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-221" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 14, -1)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-221" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-222" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-222" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-223" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 14, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-223" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-224" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 14, -2)
+
+[node name="BigBen_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-224" instance=ExtResource("3_rwtn4")]
+
+[node name="ModularBuildingBlock-225" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 15, 0)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-225" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-226" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 15, 0)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-226" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-227" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 15, 0)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-227" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-228" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 15, -1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-228" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-229" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 15, -1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-229" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-230" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 15, -1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-230" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-231" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 15, -2)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-231" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-232" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 15, -2)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-232" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-233" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 15, -2)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-233" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-234" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1.1920929e-07, 16, 0)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-234" instance=ExtResource("6_wvofo")]
+transform = Transform3D(1, 3.332249e-27, 2.842171e-14, 0, 1, 0, -2.842171e-14, 1.5246593e-20, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-235" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 16, 0)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-235" instance=ExtResource("6_wvofo")]
+transform = Transform3D(-4.3711424e-08, 1.5246593e-20, 1, 0, 1, 0, -1, -3.998699e-27, -4.3711424e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-236" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 16, -2)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-236" instance=ExtResource("6_wvofo")]
+transform = Transform3D(-1, -4.665149e-27, -8.742282e-08, 0, 1, 0, 8.742282e-08, -1.5246593e-20, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-237" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 16, -2)
+
+[node name="BigBen_Block8_MeshBlock2" parent="BlocksContainerNode3D/ModularBuildingBlock-237" instance=ExtResource("6_wvofo")]
+transform = Transform3D(1.3113421e-07, -1.5246593e-20, -1, 0, 1, 0, 1, 5.331599e-27, 1.3113421e-07, 0, 0, 0)
+
+[node name="ModularBuildingBlock-238" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99999976, 16, -1.1920929e-07)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-238" instance=ExtResource("5_r81g5")]
+transform = Transform3D(1, -1.3113416e-07, -4.371138e-08, 1.3113416e-07, 1, 2.8724041e-36, 4.371138e-08, -5.732056e-15, 1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-239" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999998, 16, -1.0000001)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-239" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-7.1054274e-15, 0, 1, 1.3113416e-07, 1, 5.7448082e-36, -1, 1.3113416e-07, -7.1054274e-15, 0, 0, 0)
+
+[node name="ModularBuildingBlock-240" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99999976, 16, -2)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-240" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-1, 1.3113416e-07, -4.3711395e-08, 1.3113416e-07, 1, 5.7448082e-36, 4.3711395e-08, -5.732056e-15, -1, 0, 0, 0)
+
+[node name="ModularBuildingBlock-241" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 16, -1)
+
+[node name="BigBen_Block7_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-241" instance=ExtResource("5_r81g5")]
+transform = Transform3D(-8.742277e-08, 1.1464112e-14, -1, 1.3113416e-07, 1, 5.7448082e-36, 1, -1.3113416e-07, -8.742277e-08, 0, 0, 0)
+
+[node name="ModularBuildingBlock-242" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 16, -1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-242" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-243" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 17, -1)
+
+[node name="BigBen_Block3_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-243" instance=ExtResource("7_b60j2")]
+
+[node name="ModularBuildingBlock-244" parent="BlocksContainerNode3D" instance=ExtResource("2_th7a3")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 1, 18, -1)
+
+[node name="BigBen_Block9_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-244" instance=ExtResource("11_x4wdw")]

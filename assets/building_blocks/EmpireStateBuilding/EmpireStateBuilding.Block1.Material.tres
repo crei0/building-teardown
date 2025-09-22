@@ -1,9 +1,11 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c87r7ldit55w2"]
 
-[ext_resource type="Texture2D" uid="uid://crjr0qeno1or3" path="res://assets/building_blocks/EmpireStateBuilding/EmpireStateBuilding.Block1_BuildingTearDown.png" id="1_qbfq3"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2krwt"]
+load_path = "res://.godot/imported/EmpireStateBuilding.Block1_BuildingTearDown.png-68846c5af4901e108ffaacc27c4a2320.s3tc.ctex"
 
 [resource]
+resource_local_to_scene = true
 resource_name = "EmpireStateBuilding.Block1.Material"
 cull_mode = 2
-albedo_texture = ExtResource("1_qbfq3")
+albedo_texture = SubResource("CompressedTexture2D_2krwt")
 texture_filter = 0
