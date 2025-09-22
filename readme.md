@@ -28,7 +28,7 @@ Inspired by [Creating fully destructible cities while maintaining 60FPS](https:/
 - [x] Reposition the camera at the start, so that the camera is centered on the Building's AABB
 - [x] Fix finding neighbours not working
 - [ ] Fix building changing not clearing the container
-- [ ] Fix UV mapping not being correctly exported? (for BigBen blocks)
+- [x] Fix UV mapping not being correctly exported? (for BigBen blocks)
 - [ ] Lerp on zoom change
 - [ ] Change color of block depending on the damage
 - [ ] Fix explosion animation not playing on left click release

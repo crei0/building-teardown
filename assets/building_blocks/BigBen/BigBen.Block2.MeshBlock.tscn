@@ -6,4 +6,5 @@
 [node name="BigBen_Block2_MeshBlock" instance=ExtResource("1_nqvin")]
 
 [node name="BigBen_Block2_Mesh" parent="." index="0"]
+material_override = ExtResource("2_lt046")
 surface_material_override/0 = ExtResource("2_lt046")
