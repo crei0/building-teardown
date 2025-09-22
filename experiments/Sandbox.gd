@@ -41,6 +41,8 @@ func _set_currently_active_building_type(new_currently_active_building_type: Glo
 func _ready() -> void:
 	Globals.building_currently_active_was_changed.connect(_on_building_currently_active_was_changed)
 
+	Globals.building_currently_active_was_changed.emit(Globals.BuildingType.EmpireState)
+
 
 func _on_building_currently_active_was_changed(target_building_type: Globals.BuildingType) -> void:
 	_currently_active_building_type = target_building_type

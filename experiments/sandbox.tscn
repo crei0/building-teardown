@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfuttsticrodp"]
+[gd_scene load_steps=9 format=3 uid="uid://dfuttsticrodp"]
 
 [ext_resource type="Script" uid="uid://br2jeirwvgcdn" path="res://experiments/Sandbox.gd" id="1_n80lw"]
 [ext_resource type="PackedScene" uid="uid://bjy8munmo030m" path="res://nodes/PlayerCamera/PlayerCamera.tscn" id="2_inyr1"]
 [ext_resource type="Material" uid="uid://cdl011t1ig062" path="res://assets/kenney/kenny-dark.StandardMaterial3d..tres" id="3_bxmun"]
-[ext_resource type="PackedScene" uid="uid://doy31kdmy5n76" path="res://nodes/BuildingBlocksCollection/Types/Basic_2x2x4.BuildingBlocksCollection.tscn" id="3_n80lw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_inyr1"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -37,7 +36,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, 0)
 distance = 40.0
 explosions_container_node_3d = NodePath("../ExplosionsContainerNode3D2")
-building_container_node_3d = NodePath("../Test_building")
+building_container_node_3d = NodePath("")
 
 [node name="ExplosionsContainerNode3D2" type="Node3D" parent="."]
 
@@ -51,9 +50,6 @@ shape = SubResource("WorldBoundaryShape3D_inyr1")
 mesh = SubResource("PlaneMesh_inyr1")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("3_bxmun")
-
-[node name="Test_building" parent="." instance=ExtResource("3_n80lw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="BuildingContainerNode3D" type="Node3D" parent="."]
 unique_name_in_owner = true

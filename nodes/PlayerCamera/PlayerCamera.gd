@@ -41,14 +41,13 @@ func _set_zoom(new_zoom: float) -> void:
 func _set_building_container_node_3d(new_building_container_node_3d: Node3D) -> void:
 	building_container_node_3d = new_building_container_node_3d
 	
-	if building_container_node_3d:
-		var aabb: AABB = _calculate_spatial_bounds(building_container_node_3d)
-		#print("Player > _set_building_container_node_3d() > aabb = ", aabb)
-		
-		position = aabb.get_center()
+	_recalculate_aabb()
 #endregion
 
+
 func _ready() -> void:
+	Globals.building_currently_active_was_changed.connect(_on_building_currently_active_was_changed)
+
 	_post_ready.call_deferred()
 
 
@@ -126,6 +125,13 @@ func _calculate_spatial_bounds(parent : Node3D) -> AABB:
 	return bounds
 
 
+func _recalculate_aabb() -> void:
+	if building_container_node_3d:
+		var aabb: AABB = _calculate_spatial_bounds(building_container_node_3d)
+		
+		position = aabb.get_center()
+
+
 #region Signals
 func _on_reload_buidling_button_pressed() -> void:
 	Utilities.load_sandbox_scene()
@@ -133,4 +139,8 @@ func _on_reload_buidling_button_pressed() -> void:
 
 func _on_load_building_option_button_item_selected(index: int) -> void:
 	Globals.building_currently_active_was_changed.emit(index as Globals.BuildingType)
+
+
+func _on_building_currently_active_was_changed(building_type: Globals.BuildingType) -> void:
+	_recalculate_aabb()
 #endregion
