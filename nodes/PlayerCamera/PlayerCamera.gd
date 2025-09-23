@@ -75,12 +75,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	# Trigger an explosion
 	if event.is_action_released(Globals.INPUT_MOUSE_LEFT):
-		print("Player > event.is_action_released(mouse_click_left)")
+		#print("Player > event.is_action_released(mouse_click_left)")
 		
 		if explosions_container_node_3d:
 			var explosion: ExplosionUsingArea2d = explosion_scene.instantiate()
+			
 			explosion.explosion_size_multiplier = _explosion_size_multiplier
-			print("Player > event.is_action_released(mouse_click_left) > explosion.explosion_size_multiplier = ", explosion.explosion_size_multiplier)
 			explosions_container_node_3d.add_child(explosion)
 			explosion.explode_at_position(_explosion_global_position)
 			
@@ -139,10 +139,6 @@ func _recalculate_aabb() -> void:
 
 
 #region Signals
-func _on_reload_buidling_button_pressed() -> void:
-	Utilities.load_sandbox_scene()
-
-
 func _on_load_building_option_button_item_selected(index: int) -> void:
 	Globals.building_currently_active_was_changed.emit(index as Globals.BuildingType)
 

@@ -39,28 +39,21 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
 layout_mode = 2
-text = "Load building"
+text = "Building"
 
 [node name="LoadBuildingOptionButton" type="OptionButton" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 selected = 0
-item_count = 3
-popup/item_0/text = "Empire State Building"
+item_count = 4
+popup/item_0/text = "Empire State"
 popup/item_0/id = 0
-popup/item_1/text = "Old Bridge"
+popup/item_1/text = "Big Ben"
 popup/item_1/id = 1
-popup/item_2/text = "Big Ben"
+popup/item_2/text = "Old Bridge"
 popup/item_2/id = 2
-
-[node name="HSeparator4" type="HSeparator" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="ReloadBuidlingButton" type="Button" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Reload building"
+popup/item_3/text = "Basic 2x2x4"
+popup/item_3/id = 3
 
 [node name="HSeparator2" type="HSeparator" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
 layout_mode = 2
@@ -123,5 +116,4 @@ layout_mode = 2
 text = "Zoom"
 
 [connection signal="item_selected" from="UiCanvasLayer/RightSidebarVBoxContainer/LoadBuildingOptionButton" to="." method="_on_load_building_option_button_item_selected"]
-[connection signal="pressed" from="UiCanvasLayer/RightSidebarVBoxContainer/ReloadBuidlingButton" to="." method="_on_reload_buidling_button_pressed"]
 [connection signal="value_changed" from="UiCanvasLayer/RightSidebarVBoxContainer/ExplosionSizeHSlider" to="." method="_on_explosion_size_h_slider_value_changed"]

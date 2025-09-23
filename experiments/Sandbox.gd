@@ -3,6 +3,7 @@ class_name Sandbox
 
 
 @onready var building_container_node_3d: Node3D = %BuildingContainerNode3D
+@onready var explosions_container_node_3d: Node3D = %ExplosionsContainerNode3D
 
 var _currently_active_building_type: Globals.BuildingType = Globals.BuildingType.EmpireState : set = _set_currently_active_building_type
 
@@ -11,10 +12,17 @@ var _currently_active_building_type: Globals.BuildingType = Globals.BuildingType
 func _set_currently_active_building_type(new_currently_active_building_type: Globals.BuildingType) -> void:
 	_currently_active_building_type = new_currently_active_building_type
 	
-	for child in building_container_node_3d.get_children():
-		building_container_node_3d.remove_child(child)
-		
-		child.queue_free()
+	if explosions_container_node_3d:
+		for child in explosions_container_node_3d.get_children():
+			explosions_container_node_3d.remove_child(child)
+			
+			child.queue_free()
+	
+	if building_container_node_3d:
+		for child in building_container_node_3d.get_children():
+			building_container_node_3d.remove_child(child)
+			
+			child.queue_free()
 	
 	var building_blocks_scene: PackedScene
 

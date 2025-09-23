@@ -16,6 +16,8 @@ Inspired by [Creating fully destructible cities while maintaining 60FPS](https:/
 
 # TODO:
 
+## Phase 1
+
 * [x] Move explosion to world tree,
 * [x] Make the explosion work
 * [x] 3D Model the Empire state building blocks
@@ -31,7 +33,12 @@ Inspired by [Creating fully destructible cities while maintaining 60FPS](https:/
 - [x] Fix building changing not clearing the container
 - [x] Change color of block depending on the damage
 - [x] Fix explosion animation not playing on left click release
-- [ ] On building change/reload explosions need to disappear instantly
+- [x] On building change/reload explosions need to disappear instantly
 - [ ] Lerp on zoom change
 * [ ] Publish repository to GitHub
 * [ ] Export for the web to GitHub Pages
+
+## Phase 2
+
+- [ ] Damage when collisions between blocks happen
+- [ ] Damage when collisions between a block and the floor happens
