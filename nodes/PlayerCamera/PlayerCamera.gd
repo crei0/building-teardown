@@ -15,6 +15,7 @@ const MOUSE_ZOOM_DELTA: float = 0.5
 
 var zoom: float = 5.0 : set = _set_zoom
 var _explosion_global_position: Vector3 = Vector3.ZERO : set = _set_explosion_global_position
+var _explosion_size_multiplier: int = 1
 
 
 #region Setters
@@ -30,6 +31,7 @@ func _set_explosion_global_position(new_explosion_global_position: Vector3) -> v
 	
 	explosion_target.global_position = _explosion_global_position
 	explosion_target.visible = not _explosion_global_position.is_zero_approx()
+	explosion_target.player_camera = self
 
 
 func _set_zoom(new_zoom: float) -> void:
@@ -56,7 +58,8 @@ func _post_ready() -> void:
 	camera_3d.position.z = zoom
 
 
-func _input(event: InputEvent):
+func _unhandled_input(event: InputEvent) -> void:
+	# Show an explosion indicator
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		var worldspace: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 		var from:Vector3 = camera_3d.project_ray_origin(event.position)
@@ -70,11 +73,14 @@ func _input(event: InputEvent):
 			if result and result.position:
 				_explosion_global_position = result.position
 	
+	# Trigger an explosion
 	if event.is_action_released(Globals.INPUT_MOUSE_LEFT):
-		#print("Player > event.is_action_released(mouse_click_left)")
+		print("Player > event.is_action_released(mouse_click_left)")
 		
 		if explosions_container_node_3d:
 			var explosion: ExplosionUsingArea2d = explosion_scene.instantiate()
+			explosion.explosion_size_multiplier = _explosion_size_multiplier
+			print("Player > event.is_action_released(mouse_click_left) > explosion.explosion_size_multiplier = ", explosion.explosion_size_multiplier)
 			explosions_container_node_3d.add_child(explosion)
 			explosion.explode_at_position(_explosion_global_position)
 			
@@ -146,5 +152,7 @@ func _on_building_recalculated_camera_position() -> void:
 
 
 func _on_explosion_size_h_slider_value_changed(value: float) -> void:
+	_explosion_size_multiplier = value
+	
 	Globals.explosion_size_multiplier_changed.emit(value)
 #endregion

@@ -20,29 +20,42 @@ func _set_currently_active_building_type(new_currently_active_building_type: Glo
 
 	match _currently_active_building_type:
 		Globals.BuildingType.Basic2x2x4:
-			building_blocks_scene = load("res://nodes/BuildingBlocksCollection/Types/Basic_2x2x4.BuildingBlocksCollection.tscn")
+			building_blocks_scene = load("uid://doy31kdmy5n76") # Basic_2x2x4.BuildingBlocksCollection
 
 		Globals.BuildingType.BigBen:
-			building_blocks_scene = load("res://nodes/BuildingBlocksCollection/Types/BigBen.BuildingBlocksCollection.tscn")
+			building_blocks_scene = load("uid://djchs68dhfu5c") # BigBen.BuildingBlocksCollection
 		
 		Globals.BuildingType.OldBridge:
-			building_blocks_scene = load("res://nodes/BuildingBlocksCollection/Types/OldBridge.BuildingBlocksCollection.tscn")
-
+			building_blocks_scene = load("uid://cht6hd4be5s18") # OldBridge.BuildingBlocksCollection
+		
 		Globals.BuildingType.EmpireState, \
 		_:
-			building_blocks_scene = load("res://nodes/BuildingBlocksCollection/Types/EmpireState.BuildingBlocksCollection.tscn")
-
+			building_blocks_scene = load("uid://drdqkvu4bmpnj") # EmpireState.BuildingBlocksCollection
 	
 	if building_blocks_scene:
-		building_container_node_3d.add_child(building_blocks_scene.instantiate())
+		print("Sandbox > _set_currently_active_building_type() > 36 > building_blocks_scene = ", building_blocks_scene)
+		var building_blocks_collection: BuildingBlocksCollection = building_blocks_scene.instantiate()
+		print("Sandbox > _set_currently_active_building_type() > 38 > building_blocks_collection = ", building_blocks_collection)
+		
+		if building_blocks_collection:
+			print("Sandbox > _set_currently_active_building_type() > 41 > building_container_node_3d.get_child_count() = ", building_container_node_3d.get_child_count())
+			building_container_node_3d.add_child(building_blocks_collection)
+			print("Sandbox > _set_currently_active_building_type() > 42 > building_container_node_3d.get_child_count() = ", building_container_node_3d.get_child_count())
 
-		# TODO: To fix this
-		# Globals.building_currently_active_was_changed.emit(_currently_active_building_type)
+			Globals.building_recalculated_camera_position.emit()
+			# TODO: To fix this
+			#Globals.building_currently_active_was_changed.emit(_currently_active_building_type)
 #endregion
 
 
 func _ready() -> void:
 	Globals.building_currently_active_was_changed.connect(_on_building_currently_active_was_changed)
+	
+	_post_ready.call_deferred()
+
+
+func _post_ready() -> void:
+	_currently_active_building_type = _currently_active_building_type
 
 
 func _on_building_currently_active_was_changed(target_building_type: Globals.BuildingType) -> void:

@@ -1,16 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuy1b3yluqbon"]
+[gd_scene load_steps=6 format=3 uid="uid://cuy1b3yluqbon"]
 
 [ext_resource type="Texture2D" uid="uid://bpgoo6f2rkeb8" path="res://assets/kenney/purple.png" id="1_0l0a2"]
 [ext_resource type="Script" uid="uid://cvho5olv0bdcm" path="res://nodes/ExplosionTarget/ExplosionTarget.gd" id="1_qokgv"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qokgv"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qokgv"]
+render_priority = 1
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+albedo_color = Color(1, 0.5512471, 0.6892592, 1)
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_apyni"]
+next_pass = SubResource("StandardMaterial3D_qokgv")
 albedo_texture = ExtResource("1_0l0a2")
+stencil_mode = 2
+stencil_flags = 2
+stencil_color = Color(1, 0.5512471, 0.6892592, 1)
 
 [node name="ExplosionTarget" type="Node3D"]
 script = ExtResource("1_qokgv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("SphereMesh_qokgv")
 surface_material_override/0 = SubResource("StandardMaterial3D_apyni")

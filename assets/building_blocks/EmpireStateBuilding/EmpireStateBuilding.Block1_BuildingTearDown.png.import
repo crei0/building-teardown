@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crjr0qeno1or3"
+uid="uid://ewfirda5wfsn"
 path.s3tc="res://.godot/imported/EmpireStateBuilding.Block1_BuildingTearDown.png-68846c5af4901e108ffaacc27c4a2320.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -27,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

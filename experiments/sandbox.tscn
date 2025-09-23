@@ -32,10 +32,11 @@ environment = SubResource("Environment_n80lw")
 transform = Transform3D(0.538612, -0.729674, 0.421275, -2.70761e-08, 0.499998, 0.866027, -0.842554, -0.466453, 0.269305, 16.4066, 24.0877, 10.8371)
 shadow_enabled = true
 
-[node name="PlayerCamera" parent="." node_paths=PackedStringArray("explosions_container_node_3d") instance=ExtResource("2_inyr1")]
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("explosions_container_node_3d", "building_container_node_3d") instance=ExtResource("2_inyr1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, 0)
 distance = 40.0
 explosions_container_node_3d = NodePath("../ExplosionsContainerNode3D2")
+building_container_node_3d = NodePath("../BuildingContainerNode3D")
 
 [node name="ExplosionsContainerNode3D2" type="Node3D" parent="."]
 

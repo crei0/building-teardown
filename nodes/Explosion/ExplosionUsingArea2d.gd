@@ -1,6 +1,7 @@
 extends Area3D
 class_name ExplosionUsingArea2d
 
+@export var explosion_size_multiplier: int = 1 : set = _set_explosion_size_multiplier
 
 @onready var collision_shape_3d: CollisionShape3D = %CollisionShape3D
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
@@ -8,10 +9,19 @@ class_name ExplosionUsingArea2d
 var _worldspace: PhysicsDirectSpaceState3D
 
 
+func _set_explosion_size_multiplier(new_explosion_size_multiplier: int) -> void:
+	explosion_size_multiplier = new_explosion_size_multiplier
+	
+	if collision_shape_3d:
+		collision_shape_3d.scale = Vector3(explosion_size_multiplier, explosion_size_multiplier, explosion_size_multiplier)
+		
+		#print("ExplosionUsingArea2d > _set_explosion_size_multiplier() > collision_shape_3d.scale = ", collision_shape_3d.scale)
+
+
 func _ready() -> void:
 	_worldspace = get_world_3d().direct_space_state
 	
-	scale = Vector3.ONE * Globals.BASE_EXPLOSION_SCALE
+	scale = Vector3.ONE
 
 
 func explode_at_position(position: Vector3) -> void:

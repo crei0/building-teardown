@@ -7,7 +7,7 @@ enum BuildingType {
 	Basic2x2x4,
 }
 
-const BASE_EXPLOSION_SCALE: float = 1.5 # TO remove
+const MAX_EXPLOSION_DAMAGE: int = 200
 const INPUT_MOUSE_LEFT: String = "mouse_click_left"
 const INPUT_MOUSE_RIGHT: String = "mouse_click_right"
 const INPUT_MOUSE_WHEEL_UP: String = "mouse_wheel_up"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://meuwobpft3b2" path="res://nodes/BuildingBlocksCollection/BuildingBlocksCollection.gd" id="1_pb38k"]
 [ext_resource type="PackedScene" uid="uid://chv8bkmlkinhu" path="res://nodes/ModularBuildingBlock/ModularBuildingBlock.tscn" id="2_2xucy"]
-[ext_resource type="PackedScene" uid="uid://b4smgng38vedy" path="res://assets/building_blocks/EmpireStateBuilding/EmpireStateBuilding.Block1.Mesh.glb" id="3_0i8cj"]
+[ext_resource type="PackedScene" uid="uid://cotetm5o3ntng" path="res://assets/building_blocks/EmpireStateBuilding/EmpireStateBuilding.Block1.MeshBlock.tscn" id="3_btbie"]
 
 [node name="Basic_2x2x4_BuildingBlocksCollection" type="Node3D"]
 script = ExtResource("1_pb38k")
@@ -17,81 +17,79 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
 
 [node name="ModularBuildingBlock-1" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-1" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-1" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-2" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-2" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-2" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-3" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-3" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-3" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-4" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-4" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-4" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-5" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-5" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-5" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-6" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-6" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-6" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-7" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-7" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-7" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-8" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -1)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-8" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-8" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-9" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-9" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-9" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-10" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-10" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-10" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-11" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-11" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-11" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-12" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-12" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-12" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-13" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-13" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-13" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-14" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-14" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-14" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-15" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-15" instance=ExtResource("3_0i8cj")]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-15" instance=ExtResource("3_btbie")]
 
 [node name="ModularBuildingBlock-16" parent="BlocksContainerNode3D" instance=ExtResource("2_2xucy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -1)
 
-[node name="EmpireStateBuilding_Block1_Mesh2" parent="BlocksContainerNode3D/ModularBuildingBlock-16" instance=ExtResource("3_0i8cj")]
-
-[editable path="BlocksContainerNode3D/ModularBuildingBlock-1/EmpireStateBuilding_Block1_Mesh2"]
+[node name="EmpireStateBuilding_Block1_MeshBlock" parent="BlocksContainerNode3D/ModularBuildingBlock-16" instance=ExtResource("3_btbie")]

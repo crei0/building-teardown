@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cotetm5o3ntng"]
+
+[ext_resource type="PackedScene" uid="uid://b4smgng38vedy" path="res://assets/building_blocks/EmpireStateBuilding/EmpireStateBuilding.Block1.Mesh.glb" id="1_2eivv"]
+[ext_resource type="Material" uid="uid://dvttxxjmrpeq0" path="res://assets/building_blocks/BuildingTearDown.Blocks.StandardMaterial3D.tres" id="2_iaehu"]
+
+[node name="EmpireStateBuilding_Block1_MeshBlock" instance=ExtResource("1_2eivv")]
+
+[node name="EmpireStateBuilding_Block1_Mesh" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_iaehu")
