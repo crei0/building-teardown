@@ -28,7 +28,7 @@ The main purpose is to make explosions (using the mouse) in certain locations of
 
 # Godot
 
-| Godot    			|  		  		|
+| Key    			| Value  		|
 | ----------------- | -------------	|
 | Version  			| 4.5    		|
 | Physics Engine	| Jolt Physics	|
