@@ -26,21 +26,20 @@ The main purpose is to make explosions (using the mouse) in certain locations of
 
 ----
 
-# Godot version
-- 4.5
+# Godot
+
+| Godot    			|  		  		|
+| ----------------- | -------------	|
+| Version  			| 4.5    		|
+| Physics Engine	| Jolt Physics	|
 
 ----
 
-# TODO:
+# TODO: Maybe someday
 
-## Proof of concept
-
-* [ ] Test explosion sound
-
-## Maybe someday
-
+* [ ] Tweak `PinJoint3D`'s parameters for better building collapse (currently when it starts falling, the building floors start getting detached/in layers)
 * [ ] Damage when collisions between blocks happen
 * [ ] Damage when collisions between a block and the floor happens
 * [ ] Sound effects when blocks collide with floor or each other
 * [ ] Create more blocks for the Empire State building (mast/antenna on the top of the building)
-* [ ] Make explosion VFX bigger/smaller depending on the `explosion_size_multiplier`
+* [ ] Make explosion VFX bigger/smaller/different depending on the `explosion_size_multiplier`
