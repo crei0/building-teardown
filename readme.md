@@ -1,45 +1,41 @@
-# Building teardown experiment
-
+# Summary
 Inspired by [Creating fully destructible cities while maintaining 60FPS](https://www.gamedeveloper.com/design/creating-fully-destructible-cities-while-maintaining-60fps)
+
+[![Creating fully destructible cities while maintaining 60FPS](http://img.youtube.com/vi/mBJSeVKWPZ4/0.jpg)](https://www.youtube.com/watch?v=mBJSeVKWPZ4)
 
 This is a simplified implementation of the link above using Godot, built as a proof of concept.
 The main purpose is to make explosions (using the mouse) in certain locations of the buildings and with that causing the collapse of the building.
 
+# GitHub interactable page
+[https://crei0.github.io/building-teardown/](https://crei0.github.io/building-teardown/)
+
+----
+
 # Credits
 
-- André Guedes (2025)
+## Coding/Godot setup/Building textures
+- André Guedes
 
-# Sound Effect(s):
+## Texture assets
 
-- [Sound Effect by LoLa Joy from Pixabay](https://pixabay.com/sound-effects/bomb-explosion-2-381970/)
+- [Uses some textures from Kenney's Prototype Textures](https://www.kenney.nl/assets/prototype-textures)
+
+## Sound Effect:
+
+- [Explosion sound Effect by LoLa Joy from Pixabay](https://pixabay.com/sound-effects/bomb-explosion-2-381970/)
+
+----
+
+# Godot version
+- 4.5
+
+----
 
 # TODO:
 
 ## Proof of concept
 
-* [x] Move explosion to world tree,
-* [x] Make the explosion work
-* [x] 3D Model the Empire state building blocks
-* [x] Press left click and hold to generate area of explosion
-* [x] Release left click to explode area
-* [x] Change explosion to use an Area2D?
-* [x] Improve visuals of building
-* [x] Improve visuals of explosion
-	* https://www.youtube.com/watch?v=RtJJVjjM_-Q 
-* [x] Reposition the camera at the start, so that the camera is centered on the Building's AABB
-* [x] Fix finding neighbours not working
-* [x] Fix UV mapping not being correctly exported? (for BigBen blocks)
-* [x] Fix building changing not clearing the container
-* [x] Change color of block depending on the damage
-* [x] Fix explosion animation not playing on left click release
-* [x] On building change/reload explosions need to disappear instantly
-* [x] Change zoom level depending on the size of the building
-* [x] Interpolate zoom changes
-* [x] Check if Empire state collection is working correctly (pinjoints working)?
-* [x] Clicking outside "map" makes an explosion at root origin
 * [ ] Test explosion sound
-* [ ] Publish repository to GitHub
-* [ ] Export for the web to GitHub Pages
 
 ## Maybe someday
 
