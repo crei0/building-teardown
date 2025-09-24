@@ -14,7 +14,7 @@ func _set_explosion_size_multiplier(new_explosion_size_multiplier: int) -> void:
 func _ready() -> void:
 	explosion_size_multiplier = explosion_size_multiplier
 	
-	Globals.explosion_size_multiplier_changed.connect(_on_explosion_size_changed)
+	Signals.explosion_size_multiplier_changed.connect(_on_explosion_size_changed)
 
 
 func _physics_process(delta: float) -> void:

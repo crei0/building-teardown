@@ -13,14 +13,14 @@ class_name ModularBuildingBlock
 
 var _mesh: Node3D
 
-
+#region Setters
 func _set_health(new_health: float) -> void:
 	health = roundf(new_health)
 	
 	if health < 1:
 		queue_free()
 		
-		Globals.wake_up_rigid_bodies.emit()
+		Signals.wake_up_rigid_bodies.emit()
 	
 	else:
 		_update_color()
@@ -30,7 +30,7 @@ func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 	neighbours = new_neighbours
 	
 	if pin_joint_3d_x_red_depth:
-		#print("ModularBuildingBlock > _set_neighbours() > neighbours.neighbour_x_red_depth = ", neighbours.neighbour_x_red_depth)
+		# print("ModularBuildingBlock > _set_neighbours() > neighbours.neighbour_x_red_depth = ", neighbours.neighbour_x_red_depth)
 		
 		# X | Depth
 		if !neighbours.neighbour_x_red_depth:
@@ -58,9 +58,10 @@ func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 			pin_joint_3d_z_blue_width.node_b = ""
 			
 		else:
-			#print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_z_blue_width")
+			print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_z_blue_width")
 			pin_joint_3d_z_blue_width.node_a = get_path()
 			pin_joint_3d_z_blue_width.node_b = neighbours.neighbour_z_blue_width.get_path()
+#endregion
 
 
 func _ready() -> void:
@@ -104,7 +105,7 @@ func _update_color() -> void:
 func damage_from_explosion_position(explosion_position: Vector3) -> void:
 	var distance: float = global_position.distance_squared_to(explosion_position)
 
-	var damage: float = roundf(Globals.MAX_EXPLOSION_DAMAGE / distance) / 2
+	var damage: float = roundf(Constants.MAX_EXPLOSION_DAMAGE / distance) / 2
 	#print("damage > ", damage)
 	
 	health -= damage

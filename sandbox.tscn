@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dfuttsticrodp"]
 
-[ext_resource type="Script" uid="uid://br2jeirwvgcdn" path="res://experiments/Sandbox.gd" id="1_n80lw"]
+[ext_resource type="Script" uid="uid://br2jeirwvgcdn" path="res://Sandbox.gd" id="1_n80lw"]
 [ext_resource type="PackedScene" uid="uid://bjy8munmo030m" path="res://nodes/PlayerCamera/PlayerCamera.tscn" id="2_inyr1"]
 [ext_resource type="Material" uid="uid://cdl011t1ig062" path="res://assets/kenney/kenny-dark.StandardMaterial3d..tres" id="3_bxmun"]
 

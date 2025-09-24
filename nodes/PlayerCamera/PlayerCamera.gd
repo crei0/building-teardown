@@ -4,6 +4,7 @@ class_name PlayerCamera
 const RAY_LENGTH: float = 200.0
 const MOUSE_SENSITIVITY: float = 0.005
 const MOUSE_ZOOM_DELTA: float = 0.5
+const ZOOM_LERP_SPEED: float = 25.0
 
 @export var explosion_scene: PackedScene
 @export_range(5, 250, 1) var distance: float = 20.0 : set = _set_distance
@@ -37,7 +38,8 @@ func _set_explosion_global_position(new_explosion_global_position: Vector3) -> v
 func _set_zoom(new_zoom: float) -> void:
 	zoom = clampf(new_zoom, 3, 20)
 	
-	camera_3d.position.z = zoom
+	#if camera_3d:
+		#camera_3d.position.z = zoom
 
 
 func _set_building_container_node_3d(new_building_container_node_3d: Node3D) -> void:
@@ -48,14 +50,23 @@ func _set_building_container_node_3d(new_building_container_node_3d: Node3D) -> 
 
 
 func _ready() -> void:
-	Globals.building_recalculated_camera_position.connect(_on_building_recalculated_camera_position)
-
+	Signals.building_recalculated_camera_position.connect(_on_building_recalculated_camera_position)
+	
 	_post_ready.call_deferred()
 
 
 func _post_ready() -> void:
 	# Force initialization
 	camera_3d.position.z = zoom
+
+
+func _physics_process(delta: float) -> void:
+	if camera_3d:
+		if camera_3d.position.z - zoom > 1:
+			camera_3d.position.z -= ZOOM_LERP_SPEED * delta
+		
+		if camera_3d.position.z - zoom < 1:
+			camera_3d.position.z += ZOOM_LERP_SPEED * delta
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -74,7 +85,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				_explosion_global_position = result.position
 	
 	# Trigger an explosion
-	if event.is_action_released(Globals.INPUT_MOUSE_LEFT):
+	if event.is_action_released(Constants.INPUT_MOUSE_LEFT):
 		#print("Player > event.is_action_released(mouse_click_left)")
 		
 		if explosions_container_node_3d:
@@ -97,10 +108,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotation.y -= event.relative.x * MOUSE_SENSITIVITY
 		rotation.x -= event.relative.y * MOUSE_SENSITIVITY
 
-	if event.is_action_released(Globals.INPUT_MOUSE_WHEEL_UP):
+	if event.is_action_released(Constants.INPUT_MOUSE_WHEEL_UP):
 		zoom -= MOUSE_ZOOM_DELTA
 	
-	if event.is_action_released(Globals.INPUT_MOUSE_WHEEL_DOWN):
+	if event.is_action_released(Constants.INPUT_MOUSE_WHEEL_DOWN):
 		zoom += MOUSE_ZOOM_DELTA
 
 
@@ -136,11 +147,14 @@ func _recalculate_aabb() -> void:
 		var aabb: AABB = _calculate_spatial_bounds(building_container_node_3d)
 		
 		position = aabb.get_center()
+		
+		# Change Zoom level to try to get the full building visible
+		zoom = int(aabb.get_longest_axis_size())
 
 
 #region Signals
 func _on_load_building_option_button_item_selected(index: int) -> void:
-	Globals.building_currently_active_was_changed.emit(index as Globals.BuildingType)
+	Signals.building_currently_active_was_changed.emit(index as Constants.BuildingType)
 
 
 func _on_building_recalculated_camera_position() -> void:
@@ -150,5 +164,5 @@ func _on_building_recalculated_camera_position() -> void:
 func _on_explosion_size_h_slider_value_changed(value: float) -> void:
 	_explosion_size_multiplier = value
 	
-	Globals.explosion_size_multiplier_changed.emit(value)
+	Signals.explosion_size_multiplier_changed.emit(value)
 #endregion

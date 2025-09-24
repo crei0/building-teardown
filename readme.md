@@ -2,13 +2,12 @@
 
 Inspired by [Creating fully destructible cities while maintaining 60FPS](https://www.gamedeveloper.com/design/creating-fully-destructible-cities-while-maintaining-60fps)
 
-# Current state:
-
-**WIP**
+This is a simplified implementation of the link above using Godot, built as a proof of concept.
+The main purpose is to make explosions (using the mouse) in certain locations of the buildings and with that causing the collapse of the building.
 
 # Credits
 
-- André Guedes
+- André Guedes (2025)
 
 # Sound Effect(s):
 
@@ -16,7 +15,7 @@ Inspired by [Creating fully destructible cities while maintaining 60FPS](https:/
 
 # TODO:
 
-## Phase 1
+## Proof of concept
 
 * [x] Move explosion to world tree,
 * [x] Make the explosion work
@@ -26,19 +25,23 @@ Inspired by [Creating fully destructible cities while maintaining 60FPS](https:/
 * [x] Change explosion to use an Area2D?
 * [x] Improve visuals of building
 * [x] Improve visuals of explosion
-	* - https://www.youtube.com/watch?v=RtJJVjjM_-Q 
-- [x] Reposition the camera at the start, so that the camera is centered on the Building's AABB
-- [x] Fix finding neighbours not working
-- [x] Fix UV mapping not being correctly exported? (for BigBen blocks)
-- [x] Fix building changing not clearing the container
-- [x] Change color of block depending on the damage
-- [x] Fix explosion animation not playing on left click release
-- [x] On building change/reload explosions need to disappear instantly
-- [ ] Lerp on zoom change
+	* https://www.youtube.com/watch?v=RtJJVjjM_-Q 
+* [x] Reposition the camera at the start, so that the camera is centered on the Building's AABB
+* [x] Fix finding neighbours not working
+* [x] Fix UV mapping not being correctly exported? (for BigBen blocks)
+* [x] Fix building changing not clearing the container
+* [x] Change color of block depending on the damage
+* [x] Fix explosion animation not playing on left click release
+* [x] On building change/reload explosions need to disappear instantly
+* [x] Change zoom level depending on the size of the building
+* [x] Lerp on zoom change
+* [ ] Check if Empire state collection is working correctly (pinjoints working)?
+* [ ] Test explosion sound
 * [ ] Publish repository to GitHub
 * [ ] Export for the web to GitHub Pages
 
-## Phase 2
+## Maybe someday
 
-- [ ] Damage when collisions between blocks happen
-- [ ] Damage when collisions between a block and the floor happens
+* [ ] Damage when collisions between blocks happen
+* [ ] Damage when collisions between a block and the floor happens
+* [ ] Sound effects when blocks collide with floor or each other

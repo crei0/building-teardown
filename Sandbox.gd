@@ -5,12 +5,14 @@ class_name Sandbox
 @onready var building_container_node_3d: Node3D = %BuildingContainerNode3D
 @onready var explosions_container_node_3d: Node3D = %ExplosionsContainerNode3D
 
-var _currently_active_building_type: Globals.BuildingType = Globals.BuildingType.EmpireState : set = _set_currently_active_building_type
+var _currently_active_building_type: Constants.BuildingType = Constants.BuildingType.EmpireState : set = _set_currently_active_building_type
 
 
 #region Setters
-func _set_currently_active_building_type(new_currently_active_building_type: Globals.BuildingType) -> void:
+func _set_currently_active_building_type(new_currently_active_building_type: Constants.BuildingType) -> void:
 	_currently_active_building_type = new_currently_active_building_type
+	
+	print("Sandbox > _currently_active_building_type() > 15")
 	
 	if explosions_container_node_3d:
 		for child in explosions_container_node_3d.get_children():
@@ -27,37 +29,31 @@ func _set_currently_active_building_type(new_currently_active_building_type: Glo
 	var building_blocks_scene: PackedScene
 
 	match _currently_active_building_type:
-		Globals.BuildingType.Basic2x2x4:
+		Constants.BuildingType.Basic2x2x4:
 			building_blocks_scene = load("uid://doy31kdmy5n76") # Basic_2x2x4.BuildingBlocksCollection
 
-		Globals.BuildingType.BigBen:
+		Constants.BuildingType.BigBen:
 			building_blocks_scene = load("uid://djchs68dhfu5c") # BigBen.BuildingBlocksCollection
 		
-		Globals.BuildingType.OldBridge:
+		Constants.BuildingType.OldBridge:
 			building_blocks_scene = load("uid://cht6hd4be5s18") # OldBridge.BuildingBlocksCollection
 		
-		Globals.BuildingType.EmpireState, \
+		Constants.BuildingType.EmpireState, \
 		_:
 			building_blocks_scene = load("uid://drdqkvu4bmpnj") # EmpireState.BuildingBlocksCollection
 	
 	if building_blocks_scene:
-		print("Sandbox > _set_currently_active_building_type() > 36 > building_blocks_scene = ", building_blocks_scene)
 		var building_blocks_collection: BuildingBlocksCollection = building_blocks_scene.instantiate()
-		print("Sandbox > _set_currently_active_building_type() > 38 > building_blocks_collection = ", building_blocks_collection)
 		
 		if building_blocks_collection:
-			print("Sandbox > _set_currently_active_building_type() > 41 > building_container_node_3d.get_child_count() = ", building_container_node_3d.get_child_count())
 			building_container_node_3d.add_child(building_blocks_collection)
-			print("Sandbox > _set_currently_active_building_type() > 42 > building_container_node_3d.get_child_count() = ", building_container_node_3d.get_child_count())
 
-			Globals.building_recalculated_camera_position.emit()
-			# TODO: To fix this
-			#Globals.building_currently_active_was_changed.emit(_currently_active_building_type)
+			Signals.building_recalculated_camera_position.emit()
 #endregion
 
 
 func _ready() -> void:
-	Globals.building_currently_active_was_changed.connect(_on_building_currently_active_was_changed)
+	Signals.building_currently_active_was_changed.connect(_on_building_currently_active_was_changed)
 	
 	_post_ready.call_deferred()
 
@@ -66,5 +62,5 @@ func _post_ready() -> void:
 	_currently_active_building_type = _currently_active_building_type
 
 
-func _on_building_currently_active_was_changed(target_building_type: Globals.BuildingType) -> void:
+func _on_building_currently_active_was_changed(target_building_type: Constants.BuildingType) -> void:
 	_currently_active_building_type = target_building_type

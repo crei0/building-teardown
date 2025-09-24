@@ -12,8 +12,3 @@ const INPUT_MOUSE_LEFT: String = "mouse_click_left"
 const INPUT_MOUSE_RIGHT: String = "mouse_click_right"
 const INPUT_MOUSE_WHEEL_UP: String = "mouse_wheel_up"
 const INPUT_MOUSE_WHEEL_DOWN: String = "mouse_wheel_down"
-
-signal wake_up_rigid_bodies
-signal building_currently_active_was_changed(building_type: BuildingType)
-signal building_recalculated_camera_position
-signal explosion_size_multiplier_changed(new_explosion_size_multiplier: int)

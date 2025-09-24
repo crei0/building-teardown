@@ -1,0 +1,8 @@
+extends Node
+
+signal wake_up_rigid_bodies
+
+signal building_currently_active_was_changed(building_type: Constants.BuildingType)
+signal building_recalculated_camera_position
+
+signal explosion_size_multiplier_changed(new_explosion_size_multiplier: int)
