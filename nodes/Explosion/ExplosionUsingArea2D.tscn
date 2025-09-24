@@ -10,7 +10,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DebrisGPUParticles3D:emitting")
+tracks/0/path = NodePath("GpuParticles3dContainerNode3D/DebrisGPUParticles3D:emitting")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -22,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("FireGPUParticles3D:emitting")
+tracks/1/path = NodePath("GpuParticles3dContainerNode3D/FireGPUParticles3D:emitting")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -34,7 +34,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SmokeGPUParticles3D2:emitting")
+tracks/2/path = NodePath("GpuParticles3dContainerNode3D/SmokeGPUParticles3D2:emitting")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -62,7 +62,7 @@ length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("DebrisGPUParticles3D:emitting")
+tracks/0/path = NodePath("GpuParticles3dContainerNode3D/DebrisGPUParticles3D:emitting")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -74,7 +74,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("FireGPUParticles3D:emitting")
+tracks/1/path = NodePath("GpuParticles3dContainerNode3D/FireGPUParticles3D:emitting")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -86,7 +86,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SmokeGPUParticles3D2:emitting")
+tracks/2/path = NodePath("GpuParticles3dContainerNode3D/SmokeGPUParticles3D2:emitting")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -113,6 +113,10 @@ _data = {
 &"RESET": SubResource("Animation_4u2h5"),
 &"explode_animation": SubResource("Animation_5k7eq")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rxfla"]
+streams_count = 1
+stream_0/stream = ExtResource("3_4u2h5")
 
 [sub_resource type="Curve" id="Curve_5k7eq"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7224199, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -215,10 +219,6 @@ scale_curve = SubResource("CurveTexture_7c6yd")
 color = Color(0.28, 0.21172668, 0.0644, 1)
 alpha_curve = SubResource("CurveTexture_m6p7x")
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rxfla"]
-streams_count = 1
-stream_0/stream = ExtResource("3_4u2h5")
-
 [node name="ExplosionUsingArea2d" type="Area3D"]
 collision_layer = 512
 collision_mask = 512
@@ -234,7 +234,17 @@ libraries = {
 &"": SubResource("AnimationLibrary_rxfla")
 }
 
-[node name="DebrisGPUParticles3D" type="GPUParticles3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_rxfla")
+unit_size = 10000.0
+max_polyphony = 4
+
+[node name="GpuParticles3dContainerNode3D" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="DebrisGPUParticles3D" type="GPUParticles3D" parent="GpuParticles3dContainerNode3D"]
+unique_name_in_owner = true
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 emitting = false
 amount = 24
@@ -245,17 +255,19 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_5k7eq")
 draw_pass_1 = SubResource("CylinderMesh_5k7eq")
 
-[node name="FireGPUParticles3D" type="GPUParticles3D" parent="."]
+[node name="FireGPUParticles3D" type="GPUParticles3D" parent="GpuParticles3dContainerNode3D"]
+unique_name_in_owner = true
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 emitting = false
-amount = 12
+amount = 24
 one_shot = true
 explosiveness = 1.0
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_4u2h5")
 draw_pass_1 = SubResource("SphereMesh_5k7eq")
 
-[node name="SmokeGPUParticles3D2" type="GPUParticles3D" parent="."]
+[node name="SmokeGPUParticles3D2" type="GPUParticles3D" parent="GpuParticles3dContainerNode3D"]
+unique_name_in_owner = true
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 emitting = false
 amount = 24
@@ -264,11 +276,6 @@ explosiveness = 1.0
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_bsirg")
 draw_pass_1 = SubResource("SphereMesh_5k7eq")
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = SubResource("AudioStreamRandomizer_rxfla")
-unit_size = 10000.0
-max_polyphony = 4
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

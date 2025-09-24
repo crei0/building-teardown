@@ -47,3 +47,4 @@ The main purpose is to make explosions (using the mouse) in certain locations of
 * [ ] Damage when collisions between a block and the floor happens
 * [ ] Sound effects when blocks collide with floor or each other
 * [ ] Create more blocks for the Empire State building (mast/antenna on the top of the building)
+* [ ] Make explosion VFX bigger/smaller depending on the `explosion_size_multiplier`

@@ -13,7 +13,8 @@ config_version=5
 config/name="building-teardown"
 run/main_scene="uid://dfuttsticrodp"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/fullsize=false
+boot_splash/image="uid://dq2scnslk5yv"
 
 [autoload]
 
@@ -84,3 +85,7 @@ keyboard-move-down={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
