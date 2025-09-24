@@ -34,8 +34,9 @@ The main purpose is to make explosions (using the mouse) in certain locations of
 * [x] Fix explosion animation not playing on left click release
 * [x] On building change/reload explosions need to disappear instantly
 * [x] Change zoom level depending on the size of the building
-* [x] Lerp on zoom change
-* [ ] Check if Empire state collection is working correctly (pinjoints working)?
+* [x] Interpolate zoom changes
+* [x] Check if Empire state collection is working correctly (pinjoints working)?
+* [x] Clicking outside "map" makes an explosion at root origin
 * [ ] Test explosion sound
 * [ ] Publish repository to GitHub
 * [ ] Export for the web to GitHub Pages
@@ -45,3 +46,4 @@ The main purpose is to make explosions (using the mouse) in certain locations of
 * [ ] Damage when collisions between blocks happen
 * [ ] Damage when collisions between a block and the floor happens
 * [ ] Sound effects when blocks collide with floor or each other
+* [ ] Create more blocks for the Empire State building (mast/antenna on the top of the building)

@@ -1,6 +1,7 @@
 extends Node3D
 class_name PlayerCamera
 
+
 const RAY_LENGTH: float = 200.0
 const MOUSE_SENSITIVITY: float = 0.005
 const MOUSE_ZOOM_DELTA: float = 0.5
@@ -13,10 +14,12 @@ const ZOOM_LERP_SPEED: float = 25.0
 
 @onready var camera_3d: Camera3D = %Camera3D
 @onready var explosion_target: ExplosionTarget = %ExplosionTarget
+@onready var building_label: Label = %BuildingLabel
 
 var zoom: float = 5.0 : set = _set_zoom
 var _explosion_global_position: Vector3 = Vector3.ZERO : set = _set_explosion_global_position
 var _explosion_size_multiplier: int = 1
+var _building_currently_active: Constants.BuildingType = Constants.BuildingType.None : set = _set_building_currently_active
 
 
 #region Setters
@@ -37,15 +40,26 @@ func _set_explosion_global_position(new_explosion_global_position: Vector3) -> v
 
 func _set_zoom(new_zoom: float) -> void:
 	zoom = clampf(new_zoom, 3, 20)
-	
-	#if camera_3d:
-		#camera_3d.position.z = zoom
 
 
 func _set_building_container_node_3d(new_building_container_node_3d: Node3D) -> void:
 	building_container_node_3d = new_building_container_node_3d
 	
 	_recalculate_aabb()
+
+
+func _set_building_currently_active(new_building_currently_active: Constants.BuildingType) -> void:
+	_building_currently_active = new_building_currently_active
+	
+	if building_label:
+		var new_font_color: Color = Color.WHITE
+		
+		if _building_currently_active == Constants.BuildingType.None:
+			new_font_color = Color.DARK_RED
+		
+		building_label.add_theme_color_override("font_color", new_font_color)
+	
+	Signals.building_currently_active_was_changed.emit(_building_currently_active)
 #endregion
 
 
@@ -58,6 +72,9 @@ func _ready() -> void:
 func _post_ready() -> void:
 	# Force initialization
 	camera_3d.position.z = zoom
+	
+	_building_currently_active = _building_currently_active
+
 
 
 func _physics_process(delta: float) -> void:
@@ -86,9 +103,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	# Trigger an explosion
 	if event.is_action_released(Constants.INPUT_MOUSE_LEFT):
-		#print("Player > event.is_action_released(mouse_click_left)")
-		
-		if explosions_container_node_3d:
+		if (
+			explosions_container_node_3d and
+			!_explosion_global_position.is_zero_approx()
+		):
 			var explosion: ExplosionUsingArea2d = explosion_scene.instantiate()
 			
 			explosion.explosion_size_multiplier = _explosion_size_multiplier
@@ -143,7 +161,11 @@ func _calculate_spatial_bounds(parent : Node3D) -> AABB:
 
 
 func _recalculate_aabb() -> void:
-	if building_container_node_3d:
+	if (
+		building_container_node_3d and
+		
+		building_container_node_3d.get_child_count() > 0
+	):
 		var aabb: AABB = _calculate_spatial_bounds(building_container_node_3d)
 		
 		position = aabb.get_center()
@@ -154,7 +176,7 @@ func _recalculate_aabb() -> void:
 
 #region Signals
 func _on_load_building_option_button_item_selected(index: int) -> void:
-	Signals.building_currently_active_was_changed.emit(index as Constants.BuildingType)
+	_building_currently_active = index as Constants.BuildingType
 
 
 func _on_building_recalculated_camera_position() -> void:

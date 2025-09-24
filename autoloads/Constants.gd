@@ -1,10 +1,11 @@
 extends Node
 
 enum BuildingType {
-	EmpireState,
+	None,
+	Basic2x2x4,
 	BigBen,
 	OldBridge,
-	Basic2x2x4,
+	EmpireState,
 }
 
 const MAX_EXPLOSION_DAMAGE: int = 200

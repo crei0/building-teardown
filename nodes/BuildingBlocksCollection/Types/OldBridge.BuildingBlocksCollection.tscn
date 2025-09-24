@@ -16,960 +16,961 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
 
 [node name="ModularBuildingBlock-1" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 1, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-1" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-2" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 1, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-2" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-3" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 1, 0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-3" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-4" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 1, 0.49999955)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-4" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-5" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 2, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-5" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-6" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 2, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-6" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-7" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 2, 0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-7" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-8" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 2, 0.49999955)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-8" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-9" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 3, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-9" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-10" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 3, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-10" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-11" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 3, 0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-11" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-33" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 3, 1.4999996)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-33" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-34" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 3, 0.49999964)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-34" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-12" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 3, 0.49999955)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-12" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-13" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 4, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-13" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-14" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 4, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-14" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-15" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 4, 0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-15" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-29" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 4, 1.4999996)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-29" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-30" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 4, 0.49999964)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-30" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-31" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5, 4, 1.4999996)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-31" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-32" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5, 4, 0.49999967)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-32" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-16" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 4, 0.49999955)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-16" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-17" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 5, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-17" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-18" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 5, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-18" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-19" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 5, 0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-19" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-20" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 5, 0.49999955)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-20" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-21" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 5, 1.4999996)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-21" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-22" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5, 5, 1.4999996)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-22" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-23" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5, 5, 0.49999967)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-23" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-24" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 5, 0.49999964)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-24" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-25" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5, 5, 1.4999998)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-25" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-26" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 6)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 5, 1.4999998)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-26" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-27" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 6)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 5, 0.49999976)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-27" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-28" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5, 5, 0.4999997)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-28" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-35" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.50000006, 1, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-35" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-36" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 1, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-36" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-37" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 1, 0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-37" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-38" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 1, 0.49999997)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-38" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-39" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.50000006, 2, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-39" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-40" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 2, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-40" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-41" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 2, 0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-41" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-42" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 2, 0.49999997)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-42" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-43" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.50000006, 3, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-43" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-44" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 3, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-44" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-45" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 3, 0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-45" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-46" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 3, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-46" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-47" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 3, 0.49999994)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-47" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-48" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 3, 0.49999997)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-48" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-49" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.50000006, 4, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-49" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-50" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 4, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-50" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-51" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 4, 0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-51" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-52" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 4, 1.4999999)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-52" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-53" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 4, 0.49999988)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-53" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-54" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 4, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-54" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-55" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 4, 0.49999994)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-55" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-56" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 4, 0.49999997)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-56" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-57" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.5, 5, 1.4999998)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-57" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-58" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 4)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5, 5, 1.4999998)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-58" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-59" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 4)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5, 5, 0.49999985)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-59" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-60" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.5, 5, 0.4999998)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-60" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-61" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 5, 1.4999999)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-61" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-62" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 5, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-62" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-63" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 5, 0.49999994)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-63" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-64" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 5, 0.49999988)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-64" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-65" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.50000006, 5, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-65" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-66" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 5, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-66" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-67" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 5, 0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-67" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-68" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 5, 0.49999997)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-68" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-69" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 1, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-69" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-70" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 1, -0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-70" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-71" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 2, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-71" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-72" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 2, -0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-72" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-73" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 3, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-73" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-74" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 3, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-74" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-75" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 3, -0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-75" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-76" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 4, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-76" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-77" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 4, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-77" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-78" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5, 4, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-78" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-79" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 4, -0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-79" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-80" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 5, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-80" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-81" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 5, -0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-81" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-82" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.5, 5, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-82" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-83" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5, 5, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-83" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-84" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 6)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 5, -0.50000024)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-84" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-85" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5, 5, -0.50000024)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-85" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-86" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 1, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-86" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-87" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.49999997, 1, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-87" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-88" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 2, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-88" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-89" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.49999997, 2, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-89" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-90" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 3, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-90" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-91" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 3, -0.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-91" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-92" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.49999997, 3, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-92" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-93" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 4, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-93" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-94" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 4, -0.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-94" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-95" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 4, -0.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-95" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-96" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.49999997, 4, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-96" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-97" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 4)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5, 5, -0.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-97" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-98" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.5, 5, -0.50000024)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-98" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-99" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5, 5, -0.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-99" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-100" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 5, -0.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-100" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-101" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 5, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-101" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-102" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.49999997, 5, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-102" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-103" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 3, 1.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-103" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-104" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 3, 0.50000006)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-104" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-105" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 4, 1.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-105" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-106" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 4, 0.50000006)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-106" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-107" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 4, 1.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-107" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-108" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 4, 0.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-108" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-109" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 5, 1.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-109" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-110" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 5, 1.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-110" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-111" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 5, 0.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-111" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-112" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 5, 0.50000006)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-112" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-113" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5, 5, 1.5000001)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-113" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-114" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -4)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5, 5, 1.5000002)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-114" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-115" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -4)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5, 5, 0.5000002)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-115" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-116" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5, 5, 0.5000002)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-116" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-117" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 1, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-117" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-118" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 1, 1.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-118" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-119" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 1, 0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-119" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-120" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 1, 0.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-120" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-121" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 2, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-121" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-122" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 2, 1.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-122" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-123" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 2, 0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-123" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-124" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 2, 0.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-124" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-125" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 3, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-125" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-126" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 3, 1.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-126" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-127" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 3, 0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-127" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-128" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 3, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-128" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-129" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 3, 0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-129" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-130" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 3, 0.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-130" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-131" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 4, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-131" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-132" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 4, 1.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-132" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-133" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 4, 0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-133" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-134" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 4, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-134" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-135" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 4, 0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-135" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-136" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 4, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-136" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-137" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 4, 0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-137" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-138" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 4, 0.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-138" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-139" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.5, 5, 1.5000002)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-139" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-140" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -6)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.5, 5, 1.5000002)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-140" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-141" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -6)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.5, 5, 0.5000003)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-141" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-142" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.5, 5, 0.50000024)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-142" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-143" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 5, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-143" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-144" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 5, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-144" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-145" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 5, 0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-145" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-146" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 5, 0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-146" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-147" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 5, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-147" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-148" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 5, 1.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-148" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-149" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 5, 0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-149" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-150" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 5, 0.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-150" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-151" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 3, -0.49999994)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-151" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-152" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 4, -0.49999994)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-152" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-153" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 4, -0.49999988)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-153" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-154" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 5, -0.49999988)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-154" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-155" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 5, -0.49999994)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-155" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-156" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -4)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5, 5, -0.49999982)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-156" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-157" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -3)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5, 5, -0.49999982)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-157" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-158" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 1, -0.49999952)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-158" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-159" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 1, -0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-159" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-175" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 0, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-175" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-176" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 0, 1.4999995)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-176" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-177" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 0, 0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-177" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-178" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 0, 0.49999955)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-178" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-179" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.50000006, 0, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-179" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-180" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0, 1.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-180" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-181" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0, 0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-181" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-182" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 0, 0.49999997)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-182" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-183" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 0, -0.50000036)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-183" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-184" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 11)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.5, 0, -0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-184" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-185" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-185" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-186" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.49999997, 0, -0.5)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-186" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-187" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 0, 1.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-187" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-188" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 0, 1.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-188" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-189" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 0, 0.5000005)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-189" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-190" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 0, 0.5000004)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-190" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-191" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 0, -0.49999952)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-191" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-192" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 0, -0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-192" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-160" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 2, -0.49999952)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-160" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-161" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 2, -0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-161" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-162" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 3, -0.49999952)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-162" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-163" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 3, -0.49999964)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-163" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-164" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 3, -0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-164" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-165" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 4, -0.49999952)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-165" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-166" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 4, -0.49999964)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-166" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-167" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 4, -0.49999964)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-167" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-168" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 4, -0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-168" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-169" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -6)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.5, 5, -0.4999997)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-169" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-170" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.5, 5, -0.49999976)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-170" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-171" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 5, -0.49999964)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-171" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-172" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -7)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 5, -0.49999964)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-172" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-173" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -10)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 5, -0.49999952)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-173" instance=ExtResource("3_f2q61")]
 
 [node name="ModularBuildingBlock-174" parent="BlocksContainerNode3D" instance=ExtResource("2_mnn5x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -9)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.5, 5, -0.49999958)
 
 [node name="OldBridge_Block1_MeshBLock" parent="BlocksContainerNode3D/ModularBuildingBlock-174" instance=ExtResource("3_f2q61")]

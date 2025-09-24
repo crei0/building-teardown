@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjy8munmo030m"]
+[gd_scene load_steps=8 format=3 uid="uid://bjy8munmo030m"]
 
 [ext_resource type="Script" uid="uid://eq22er4oefw3" path="res://nodes/PlayerCamera/PlayerCamera.gd" id="1_k3tdu"]
 [ext_resource type="PackedScene" uid="uid://clb8s1j0qhby4" path="res://nodes/Explosion/ExplosionUsingArea2D.tscn" id="3_yv63t"]
@@ -6,6 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://cuy1b3yluqbon" path="res://nodes/ExplosionTarget/ExplosionTarget.tscn" id="4_wj20d"]
 [ext_resource type="Texture2D" uid="uid://bp241l78iycti" path="res://assets/ui/mouse_right.png" id="5_i5y45"]
 [ext_resource type="Texture2D" uid="uid://c0k4s0735nxm8" path="res://assets/ui/mouse_middle_wheel.png" id="6_i5y45"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5y45"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="PlayerCamera" type="Node3D" node_paths=PackedStringArray("explosions_container_node_3d")]
 script = ExtResource("1_k3tdu")
@@ -37,23 +49,29 @@ offset_bottom = -16.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
+[node name="BuildingLabel" type="Label" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Building"
 
 [node name="LoadBuildingOptionButton" type="OptionButton" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5y45")
 selected = 0
-item_count = 4
-popup/item_0/text = "Empire State"
+fit_to_longest_item = false
+allow_reselect = true
+item_count = 5
+popup/item_0/text = "None"
 popup/item_0/id = 0
-popup/item_1/text = "Big Ben"
+popup/item_1/text = "Basic 2x2x4"
 popup/item_1/id = 1
-popup/item_2/text = "Old Bridge"
+popup/item_2/text = "Big Ben"
 popup/item_2/id = 2
-popup/item_3/text = "Basic 2x2x4"
+popup/item_3/text = "Old Bridge"
 popup/item_3/id = 3
+popup/item_4/text = "Empire State"
+popup/item_4/id = 4
 
 [node name="HSeparator2" type="HSeparator" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
 layout_mode = 2
@@ -66,7 +84,8 @@ text = "Explosion size"
 [node name="ExplosionSizeHSlider" type="HSlider" parent="UiCanvasLayer/RightSidebarVBoxContainer"]
 layout_mode = 2
 min_value = 1.0
-max_value = 3.0
+max_value = 7.0
+step = 3.0
 value = 1.0
 rounded = true
 tick_count = 3

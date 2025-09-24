@@ -5,14 +5,12 @@ class_name Sandbox
 @onready var building_container_node_3d: Node3D = %BuildingContainerNode3D
 @onready var explosions_container_node_3d: Node3D = %ExplosionsContainerNode3D
 
-var _currently_active_building_type: Constants.BuildingType = Constants.BuildingType.EmpireState : set = _set_currently_active_building_type
+var _currently_active_building_type: Constants.BuildingType = Constants.BuildingType.None : set = _set_currently_active_building_type
 
 
 #region Setters
 func _set_currently_active_building_type(new_currently_active_building_type: Constants.BuildingType) -> void:
 	_currently_active_building_type = new_currently_active_building_type
-	
-	print("Sandbox > _currently_active_building_type() > 15")
 	
 	if explosions_container_node_3d:
 		for child in explosions_container_node_3d.get_children():
@@ -38,9 +36,8 @@ func _set_currently_active_building_type(new_currently_active_building_type: Con
 		Constants.BuildingType.OldBridge:
 			building_blocks_scene = load("uid://cht6hd4be5s18") # OldBridge.BuildingBlocksCollection
 		
-		Constants.BuildingType.EmpireState, \
-		_:
-			building_blocks_scene = load("uid://drdqkvu4bmpnj") # EmpireState.BuildingBlocksCollection
+		Constants.BuildingType.EmpireState:
+			building_blocks_scene = load("uid://0015qu8f334i") # EmpireState.BuildingBlocksCollection
 	
 	if building_blocks_scene:
 		var building_blocks_collection: BuildingBlocksCollection = building_blocks_scene.instantiate()
@@ -61,6 +58,7 @@ func _ready() -> void:
 func _post_ready() -> void:
 	_currently_active_building_type = _currently_active_building_type
 
-
+#region Signals
 func _on_building_currently_active_was_changed(target_building_type: Constants.BuildingType) -> void:
 	_currently_active_building_type = target_building_type
+#endregion

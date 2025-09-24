@@ -1,6 +1,7 @@
 extends RigidBody3D
 class_name ModularBuildingBlock
 
+
 @export var health: float = 100.0 : set = _set_health
 @export var neighbours: ModularBuildingBlockNeighbours = null : set = _set_neighbours
 
@@ -12,6 +13,7 @@ class_name ModularBuildingBlock
 @onready var pin_joint_3d_z_blue_width: PinJoint3D = %"PinJoint3D-Z-Blue-Width"
 
 var _mesh: Node3D
+
 
 #region Setters
 func _set_health(new_health: float) -> void:
@@ -58,7 +60,7 @@ func _set_neighbours(new_neighbours: ModularBuildingBlockNeighbours) -> void:
 			pin_joint_3d_z_blue_width.node_b = ""
 			
 		else:
-			print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_z_blue_width")
+			#print("ModularBuildingBlock > _set_neighbours() > found neighbours.pin_joint_3d_z_blue_width")
 			pin_joint_3d_z_blue_width.node_a = get_path()
 			pin_joint_3d_z_blue_width.node_b = neighbours.neighbour_z_blue_width.get_path()
 #endregion
@@ -102,10 +104,9 @@ func _update_color() -> void:
 				material.albedo_color = Color.from_hsv(0, 1 - (health / 100), 1)
 
 
-func damage_from_explosion_position(explosion_position: Vector3) -> void:
-	var distance: float = global_position.distance_squared_to(explosion_position)
+func damage_from_explosion_position(explosion_transform: Transform3D, explosion_size_multiplier: int) -> void:
+	var distance: float = global_position.distance_squared_to(explosion_transform.origin)
 
-	var damage: float = roundf(Constants.MAX_EXPLOSION_DAMAGE / distance) / 2
-	#print("damage > ", damage)
+	var damage: float = roundf(Constants.MAX_EXPLOSION_DAMAGE / distance) / 2 * explosion_size_multiplier
 	
 	health -= damage

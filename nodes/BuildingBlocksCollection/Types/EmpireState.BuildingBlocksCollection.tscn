@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://drdqkvu4bmpnj"]
+[gd_scene load_steps=4 format=3 uid="uid://0015qu8f334i"]
 
 [ext_resource type="Script" uid="uid://meuwobpft3b2" path="res://nodes/BuildingBlocksCollection/BuildingBlocksCollection.gd" id="1_kfh68"]
 [ext_resource type="PackedScene" uid="uid://chv8bkmlkinhu" path="res://nodes/ModularBuildingBlock/ModularBuildingBlock.tscn" id="1_kqpgr"]
