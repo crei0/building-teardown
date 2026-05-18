@@ -215,7 +215,7 @@ scale_curve = SubResource("CurveTexture_7c6yd")
 color = Color(0.28, 0.21172668, 0.0644, 1)
 alpha_curve = SubResource("CurveTexture_m6p7x")
 
-[node name="ExplosionUsingArea2d" type="Area3D"]
+[node name="ExplosionUsingArea3d" type="Area3D"]
 collision_layer = 512
 collision_mask = 512
 script = ExtResource("1_5k7eq")

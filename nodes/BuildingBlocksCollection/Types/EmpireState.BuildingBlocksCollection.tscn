@@ -4,12 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://chv8bkmlkinhu" path="res://nodes/ModularBuildingBlock/ModularBuildingBlock.tscn" id="1_kqpgr"]
 [ext_resource type="PackedScene" uid="uid://cotetm5o3ntng" path="res://assets/building_blocks/EmpireStateBuilding/EmpireStateBuilding.Block1.MeshBlock.tscn" id="3_k7shs"]
 
-[node name="EmpireState_building" type="Node3D"]
+[node name="EmpireState_BuildingBlocksCollection" type="Node3D"]
 script = ExtResource("1_kfh68")
-
-[node name="PinJointsContainerNode3D" type="Node3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
 
 [node name="BlocksContainerNode3D" type="Node3D" parent="."]
 unique_name_in_owner = true

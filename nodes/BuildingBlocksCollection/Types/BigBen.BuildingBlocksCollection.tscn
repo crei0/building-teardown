@@ -12,12 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://k4bcqlyyw7oq" path="res://assets/building_blocks/BigBen/BigBen.Block6.MeshBlock.tscn" id="10_7g4vf"]
 [ext_resource type="PackedScene" uid="uid://dd8lmibgih6f" path="res://assets/building_blocks/BigBen/BigBen.Block9.MeshBlock.tscn" id="11_x4wdw"]
 
-[node name="Basic_2x2x4_BuildingBlocksCollection" type="Node3D"]
+[node name="BigBen_BuildingBlocksCollection" type="Node3D"]
 script = ExtResource("1_rwtn4")
-
-[node name="PinJointsContainerNode3D" type="Node3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -0.5)
 
 [node name="BlocksContainerNode3D" type="Node3D" parent="."]
 unique_name_in_owner = true
